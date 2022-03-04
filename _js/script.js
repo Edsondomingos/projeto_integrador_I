@@ -1,0 +1,3 @@
+/*
+Script principal do site
+*/

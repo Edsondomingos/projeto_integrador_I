@@ -61,6 +61,31 @@ a:hover {
 	color: white;
 }
 
+section {
+	display: flex;
+	padding: 10px;
+}
+
+article {
+	border: 1px solid black;
+	padding: 10px;
+	margin: 10px;
+	text-align: center;
+}
+
+article p {
+	margin: 10px;
+}
+
+.bt-inscricao {
+	background-color: red;
+	padding: 5px;
+	border-radius: 10px;
+	color: white;
+	font-weight: bold;
+	margin: auto;
+}
+
 form {
 	text-align: center;
 	width: 250px;

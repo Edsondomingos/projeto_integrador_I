@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Reaproveitar</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="./_css/style.css">
 </head>
 <body>
 
@@ -24,7 +24,6 @@
 					echo "<li><a href=''>Sair</a></li>";
 				} else {
 					echo "<li id='criar'><a href=''>Entrar</a></li>";
-					echo "<li id='teste'>Teste</li>";
 				}
 			?>
 			
