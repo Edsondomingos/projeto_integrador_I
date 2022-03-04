@@ -1,5 +1,5 @@
 <?php
-	include 'head.php';
+	include './_template/head.php';
 	include './_bd/conexao.php';
 
 	$conn = conectar();
@@ -7,7 +7,7 @@
 	$sql = "SELECT * FROM evento";
 
 	$result = $conn->query($sql);
-	// echo $result->num_row;
+	
 	if ($result->num_rows > 0){
 		echo "<section>";
 		while ($row = $result->fetch_assoc()){
@@ -23,6 +23,6 @@
 		}
 		echo "</section>";
 	}
-	include 'footer.php';
+	include './_template/footer.php';
 
 ?>
