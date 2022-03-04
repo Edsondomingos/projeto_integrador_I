@@ -1,0 +1,93 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Arial;
+}
+
+header {
+	background-image: linear-gradient(to top, #eee, rgba(220, 100, 0, 0.7));
+}
+
+h1 {
+	text-align: center;
+	font-size: 50px;
+	color: orange;
+	text-shadow: 2px 2px 2px black;
+	height: 50px;
+}
+
+nav {
+	margin: 0px 0 20px 0;
+}
+
+nav ul {
+	display: flex;
+	justify-content: flex-end;
+	background-image: linear-gradient(to top, rgba(220, 100, 0, 0.7), #eee);
+	border-bottom: 1px solid black;
+	font-size: 30px;
+	height: 40px;
+	position: sticky;
+}
+
+nav ul li {
+	list-style: none;
+	border: 2px solid black;
+	border-radius: 10% 10% 0 0;
+	border-bottom: 0px;
+	padding: 10px;
+	box-sizing: border-box;
+	color: #444;	
+}
+
+nav ul li:hover {
+	background-color: #f80;
+	border-color: white;
+}
+
+main {
+	height: 75vh;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+a:hover {
+	color: white;
+}
+
+form {
+	text-align: center;
+	width: 250px;
+	margin: auto;
+	padding: 10px;
+	/*margin: 20px;*/
+	border: 1px solid black;
+}
+
+form input {
+	padding: 5px;
+	margin: 5px;
+}
+
+#corredor {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 30px;
+	border-bottom: 1px dotted black;
+}
+
+footer {
+	margin-top: 20px;
+	text-align: center;
+}
+
+footer p {
+	padding: 20px;
+	background-image: linear-gradient(to top, rgba(220, 100, 0, 0.7), #fff);
+}
