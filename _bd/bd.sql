@@ -1,4 +1,5 @@
 CREATE DATABASE IF NOT EXISTS corrida;
+use corrida;
 
 CREATE TABLE IF NOT EXISTS atleta(
     cpf VARCHAR(11) NOT NULL PRIMARY KEY,
@@ -6,7 +7,8 @@ CREATE TABLE IF NOT EXISTS atleta(
     data_de_nascimento DATE NOT NULL,
     telefone VARCHAR(11) NOT NULL,
     email VARCHAR(100) NOT NULL,
-    usuario VARCHAR(30) NOT NULL
+    usuario VARCHAR(30) NOT NULL,
+    senha VARCHAR(100) NOT NULL
 
 );
 
