@@ -1,6 +1,6 @@
 <?php
 
-$perfil = $_GET["id"];
+$perfil = $_GET["cpf"];
 
 include "conexao.php";
 
