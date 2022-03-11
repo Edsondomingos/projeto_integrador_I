@@ -46,7 +46,7 @@
     ?>
 
     <h1>Editar Perfil</h1>
-    <form action="editar_bd.php" method="post">
+    <form action="../_bd/editar_bd.php" method="post">
     <p>
         <label for="nome">Nome</label>
         <input type="text" name="nome" id="nome" value="<?php echo $nome; ?>"/>

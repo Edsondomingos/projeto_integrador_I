@@ -1,6 +1,6 @@
 <?php 
 
-	$id_evento = $_GET['id'];
+	// $id_evento = $_GET['id'];
 
 	include '../_bd/conexao.php';
 

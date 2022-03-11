@@ -1,5 +1,5 @@
 <?php 
-  
+    include '../_bd/conexao.php';
 
     $conn = conectar();
 
@@ -8,7 +8,7 @@
   
     $result = $conn->query($sql);
     if($result->num_rows > 0){
-        header('Location: perfil.php?bv=Seja+bem+vindo');
+        header('Location: ../index.php?bv=Seja+bem+vindo');
         session_start();
         $_SESSION['usuario'] = $_POST["usuario"];
         $_SESSION['cpf'] = $_POST["senha"];

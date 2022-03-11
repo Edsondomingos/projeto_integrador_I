@@ -6,7 +6,7 @@
   <body>
     <h1>Login</h1>  
 
-    <form action="autenticar.php" method="POST">
+    <form action="../_bd/autenticar.php" method="POST">
         <?php
           if (isset($_GET["autenticar"])) {
             echo "<strong style='color:red;'>" .$_GET["autenticar"]. "</strong>";

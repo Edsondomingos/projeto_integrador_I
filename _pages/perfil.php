@@ -1,7 +1,7 @@
 <?php 
-	session_start();
-	if(isset($_SESSION['nome']) and isset($_SESSION['senha'])){
-
+	// session_start();
+	// if(isset($_SESSION['nome']) and isset($_SESSION['senha'])){
+?>
 		<a href="index.php">
 		</a>
 		<h1>Perfil</h1>
@@ -59,7 +59,7 @@
 	<script type="text/javascript" src="script.js"></script>
 
 <?php
-	}else{
-		header('Location: index.php');
-	};
+	// }else{
+	// 	header('Location: index.php');
+	// };
 ?>

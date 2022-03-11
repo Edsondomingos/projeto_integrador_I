@@ -153,7 +153,7 @@
 					echo "<li><a href=''>Pagamentos</a></li>";
 					echo "<li><a href=''>Sair</a></li>";
 				} else {
-					echo "<li id='criar'><a href=''>Entrar</a></li>";
+					echo "<li><a href='./_pages/login.php'>Entrar</a></li>";
 				}
 			?>
 			
