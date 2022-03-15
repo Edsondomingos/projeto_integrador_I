@@ -8,66 +8,74 @@
    
   <body> -->
     <?php include "../_template/head.php"; ?>
-    <main>
+   
       <h1>Cadastre-se</h1>
 
-        <form  method="POST" action="cadastro_db.sql">
+        <form  method="GET" action="cadastro_db.sql">
           
           
-            <label for="cpf">
-               <p>
-                <span>CPF</span>
-               </p>  
-              <input type="text" id="cpf" name="cpf">
+          <p>
+            <label for="cpf"> 
+                 <span>CPF</span>    
+                 <input type="text" id="cpf" name="cpf" placeholder="Digite seu CPF" required/>             
             </label>
+          </p>    
+            
           
+          <p>
             <label for="name">
-               <p>
-                <span>Nome</span>
-               </p>  
-              <input type="text" id="name" name="nome">
+                <span>Nome</span>          
+                <input type="text" id="name" name="nome" placeholder="Digite seu Nome Completo" required/>
             </label>
-
+          </p>
+            
+            
+          <p>
             <label for="nascimento">
-               <p>
                 <span>Data de Nascimento</span>
-               </p>
-              <input type="date" id="data" name="data">
+                <input type="date" id="data" name="data">
             </label>
+          </p>    
+            
           
+          <p>  
             <label for="telefone">
-               <p>
                 <span>Telefone</span>
-               </p> 
-              <input type="text" id="telefone" name="telefone">
+                <input type="text" id="telefone" name="telefone" placeholder="Digite seu Telefone" required/>
             </label>
+          </p>    
+            
          
-          <label for="email">
-               <p>
-                <span>E-Mail</span>
-               </p>  
-              <input type="text" id="email" name="email">
+          <p>
+            <label for="email">
+                <span>E-Mail</span> 
+                <input type="text" id="email" name="email" placeholder="Digite seu E-Mail" required/>
             </label>
-
-            <label for="usuario">
-              <p>
-                <span>Usuário</span>
-              </p> 
-             <input type="text" id="usuario" name="usuario">
-           </label>  
-              
-            <label for="password">
-               <p> 
-                <span>Senha</span>
-               </p>  
-              <input type="password" id="senha" name="senha">
+          </p>  
+            
+            
+          <p>
+            <label for="usuario">             
+                <span>Usuário</span> 
+                <input type="text" id="usuario" name="usuario" placeholder="Digite seu ID de Usuário" required/>
             </label> 
+          </p>    
+            
+            
+          <p>
+            <label for="password"> 
+                <span>Senha</span> 
+              <input type="password" id="senha" name="senha" placeholder="Digite sua Senha" required/>
+            </label> 
+          </p>      
+            
 
           <p>
             <input type="submit" value="Cadastrar" id="button">
           </p>  
         </form>
-    </main>
+</body>
+  </html>
     <?php include "../_template/footer.php"; ?>
 <!-- </body>
 </html> -->
