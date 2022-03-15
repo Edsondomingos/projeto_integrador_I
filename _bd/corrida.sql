@@ -1,5 +1,5 @@
 CREATE DATABASE IF NOT EXISTS corrida;
-
+use corrida;
 CREATE TABLE IF NOT EXISTS atleta(
     cpf VARCHAR(11) NOT NULL PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
@@ -24,8 +24,8 @@ CREATE TABLE IF NOT EXISTS evento(
 CREATE TABLE IF NOT EXISTS inscricao(
     id int NOT NULL auto_increment PRIMARY KEY,
     data_hora_inscricao DATETIME NOT NULL,
-    numero_inscricao VARCHAR,
-    resultado DECIMAL(10,2),
+    numero_inscricao VARCHAR(20),
+    resultado VARCHAR(10),
     cpf_atleta VARCHAR(11) NOT NULL,
     id_evento int NOT NULL,
     FOREIGN KEY (cpf_atleta) REFERENCES atleta(cpf),

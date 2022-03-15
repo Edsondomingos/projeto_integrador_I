@@ -1,24 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inscrição</title>
-   
-</head>
-<body>
+
     <a href="index.php">
         <figure>
        
         </figure>
     </a>
 
+    <?php  include "../_template/head.php"; ?>
+
     <h1>Inscrição</h1>
-    <button><a href='perfil.php'>Perfil</a></button>
+    <!-- <button><a href='../_bd/perfil.php'>Perfil</a></button> -->
     <form action="inscriao_bd.php" method="post">
 
-    <p>
+    <!-- <p>
         <label for="data" >Data da inscrição</label>
         <input type="date" name="data" id="data" required>
     </p>
@@ -41,11 +34,9 @@
     <p>
         <label for="cpf" >CPF</label>
         <input type="number" name="cpf" id="cpf" required>
-    </p>
+    </p> -->
 
     <p><input type="submit" value="inscrição"></p>
 
     </form>
-    <footer></footer>
-</body>
-</html>
+    <?php  include "../_template/footer.php"; ?>

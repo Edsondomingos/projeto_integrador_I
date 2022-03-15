@@ -1,17 +1,9 @@
-<!-- <!DOCTYPE html>
-<html lang='pt-br'>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Cadastro de Usuário</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">    
-   
-  <body> -->
+
     <?php include "../_template/head.php"; ?>
    
       <h1>Cadastre-se</h1>
 
-        <form  method="GET" action="cadastro_db.sql">
+        <form  method="post" action="../_bd/cadastro_bd.php">
           
           
           <p>
@@ -77,5 +69,3 @@
 </body>
   </html>
     <?php include "../_template/footer.php"; ?>
-<!-- </body>
-</html> -->
