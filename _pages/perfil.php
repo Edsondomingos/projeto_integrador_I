@@ -43,14 +43,14 @@
 				if($result->num_rows > 0){
 					
 				while($row= $result->fetch_assoc()){
-            
-						echo "<p>Cpf".$row['cpf']."</p>";
-						echo "<p>Nome".$row['nome']."<p>";
-						echo "<p>Data de Nascimento".$row["data_de_nascimento"]."</p>";
-			            echo "<p>Telefone".$row["telefone"]."</p>";
-			            echo "<p>E-Mail".$row["email"]."</p>";
-			            echo "<p>Usuário".$row["usuario"]"</p>;
-			            echo "<p>Senha".$row["senha"]."</p>";
+                    
+                            echo "<p>Cpf".$row['cpf']."</p>";
+      						echo "<p>Nome".$row['nome']."</p>";
+      						echo "<p>Data de Nascimento".$row['data_de_nascimento']."</p>";
+                            echo "<p>Telefone".$row['telefone']."</p>";
+                            echo "<p>E-Mail".$row['email']."</p>";
+                            echo "<p>Usuário".$row['usuario']."</p>";
+          			        echo "<p>Senha".$row['senha']."</p>";
 
 					};
 }
