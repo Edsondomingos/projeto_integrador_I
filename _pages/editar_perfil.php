@@ -12,7 +12,7 @@
     
     $codigo = $_GET["codigo"];
 
-    include "";
+    include "../_bd/conexao.php";
 
     $conn = conectar();
 

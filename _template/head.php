@@ -154,6 +154,7 @@
 					echo "<li><a href=''>Sair</a></li>";
 				} else {
 					echo "<li><a href='./_pages/login.php'>Entrar</a></li>";
+					echo "<li><a href='./_pages/cadastro.php'>Criar Conta</a></li>";
 				}
 			?>
 			

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang='pt-br'>
 <head>
     <meta charset="utf-8">
@@ -6,8 +6,8 @@
     <title>Cadastro de Usuário</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">    
    
-  <body>
-  
+  <body> -->
+    <?php include "../_template/head.php"; ?>
     <main>
       <h1>Cadastre-se</h1>
 
@@ -31,7 +31,7 @@
             <label for="nascimento">
                <p>
                 <span>Data de Nascimento</span>
-               </p>  
+               </p>
               <input type="date" id="data" name="data">
             </label>
           
@@ -68,6 +68,6 @@
           </p>  
         </form>
     </main>
-    
-</body>
-</html>
+    <?php include "../_template/footer.php"; ?>
+<!-- </body>
+</html> -->
