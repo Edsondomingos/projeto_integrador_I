@@ -1,0 +1,44 @@
+CREATE DATABASE IF NOT EXISTS corrida;
+
+CREATE TABLE IF NOT EXISTS atleta(
+    cpf VARCHAR(11) NOT NULL PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    data_de_nascimento DATE NOT NULL,
+    telefone VARCHAR(11) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    usuario VARCHAR(30) NOT NULL,
+    senha VARCHAR(30) NOT NULL
+
+);
+
+CREATE TABLE IF NOT EXISTS evento(
+    id INT NOT NULL auto_increment PRIMARY KEY,
+    local_evento VARCHAR(100) NOT NULL,
+    data_evento DATE NOT NULL,
+    imagem VARCHAR(100) NOT NULL,
+    descricao VARCHAR(500) NOT NULL,
+    titulo VARCHAR(100) NOT NULL
+
+);
+
+CREATE TABLE IF NOT EXISTS inscricao(
+    id int NOT NULL auto_increment PRIMARY KEY,
+    data_hora_inscricao DATETIME NOT NULL,
+    numero_inscricao VARCHAR,
+    resultado DECIMAL(10,2),
+    cpf_atleta VARCHAR(11) NOT NULL,
+    id_evento int NOT NULL,
+    FOREIGN KEY (cpf_atleta) REFERENCES atleta(cpf),
+    FOREIGN KEY (id_evento) REFERENCES evento(id)
+
+);
+
+CREATE TABLE IF NOT EXISTS pagamento(
+    id INT NOT NULL auto_increment PRIMARY KEY,
+    forma_de_pagamento VARCHAR(50) NOT NULL,
+    data_hora_pagamento DATETIME NOT NULL,
+    valor DECIMAL(7,2) NOT NULL,
+    id_inscricao int NOT NULL,
+    FOREIGN KEY (id_inscricao) REFERENCES inscricao(id)
+    
+);
