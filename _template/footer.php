@@ -14,7 +14,7 @@
 		</figure> -->
 		<p>&copy; Alunos do IFCan</p>
 	</footer>
-
-	<script type="text/javascript" src="script.js"></script>
+	</div>
+	<script type="text/javascript" src="./_js/script.js"></script>
 </body>
 </html>

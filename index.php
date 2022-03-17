@@ -17,7 +17,7 @@
 			echo "<p>".$row['descricao']."</p>";
 			echo "<p>".$row['data_evento']."</p>";
 			echo "<p>".$row['local_evento']."</p>";
-			echo "<a href='evento.php?id=".$row['id']."' class='bt-inscricao'>Detalhes</a>";
+			echo "<a href='./_pages/inscricao.php?id=".$row['id']."' class='bt-inscricao'>Detalhes</a>";
 			echo "</article>";
 			
 		}

@@ -14,6 +14,10 @@
 			font-family: Arial;
 		}
 
+		div {
+			height: 100%;
+		}
+
 		header {
 			background-image: linear-gradient(to top, #eee, rgba(220, 100, 0, 0.7));
 		}
@@ -56,7 +60,7 @@
 		}
 
 		main {
-			height: 75vh;
+			height: 100vh;
 		}
 
 		a {
@@ -115,7 +119,7 @@
 		}
 
 		footer {
-			margin-top: 20px;
+			/*margin-top: 20px;*/
 			text-align: center;
 		}
 
@@ -136,27 +140,39 @@
 	</style>
 </head>
 <body>
-
+	<div>
 	<header>
 		<h1>Eventos de Corrida</h1>
 	</header>
 
 	<nav>
 		<ul>
-			
-			<?php
-				session_start();
-				if(isset($_SESSION['usuario'])){
-					echo "<li><a href='./pagina.php'>Página inicial</a></li>";
-					echo "<li><a href=''>Perfil</a></li>";
-					echo "<li><a href=''>Criar evento</a></li>";
-					echo "<li><a href=''>Pagamentos</a></li>";
-					echo "<li><a href=''>Sair</a></li>";
-				} else {
-					echo "<li><a href='./_pages/login.php'>Entrar</a></li>";
-					echo "<li><a href='./_pages/cadastro.php'>Criar Conta</a></li>";
-				}
-			?>
+		
+		<?php 
+			function URL(){
+				$_SERVER['REQUEST_URI'] = '/projeto_integrador_i/';
+				return $_SERVER['REQUEST_URI'];
+			}
+			// if ($_SERVER['REQUEST_URI'] == '/projeto_integrador_i/'){
+			// 	$path = './_pages/';
+			// 	// if (){
+			// 	// 	$path = '../';
+			// 	// }
+			// } else if (strpos($_SERVER['REQUEST_URI'], '_pages') == true) {
+			// 	$path = '../';
+			// }
+			session_start();
+			echo "<li><a href='".URL()."'>Página inicial</a></li>";			
+			if (isset($_SESSION['usuario'])){
+				echo "<li><a href='".URL()."_pages/perfil.php'>Perfil</a></li>";
+				echo "<li><a href='".URL()."_pages/criar_evento.php'>Criar evento</a></li>";
+				echo "<li><a href='".URL()."_pages/pagamento.php'>Pagamentos</a></li>";
+				echo "<li><a href='".URL()."/_bd/sair_sessao.php'>Sair</a></li>";
+			} else {
+				echo "<li><a href='".URL()."_pages/login.php'>Entrar</a></li>";
+				echo "<li><a href='".URL()."_pages/cadastro.php'>Criar Conta</a></li>";
+			}
+		?>
 			
 		</ul>
 	</nav>

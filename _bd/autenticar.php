@@ -13,7 +13,7 @@
         $_SESSION['usuario'] = $_POST["usuario"];
         $_SESSION['cpf'] = $_POST["senha"];
     }else{
-        header('Location: login.php?autenticar=usuario+ou+senha+incorreta,+tente+novamente.');
+        header('Location: ../_pages/login.php?autenticar=usuario+ou+senha+incorreta,+tente+novamente.');
     };
 
     desconectar($conn);
