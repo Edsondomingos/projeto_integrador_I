@@ -1,4 +1,4 @@
-# Repositório esclusivo do 1° projeto integrador do curso de Sistemas para Internet no IFRN Canguaretama  
+# Repositório exclusivo do 1° projeto integrador do curso de Sistemas para Internet no IFRN Canguaretama  
 
 ### *Divulgação de eventos esportivos*
 
