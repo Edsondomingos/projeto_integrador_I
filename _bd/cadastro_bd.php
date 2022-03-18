@@ -13,7 +13,7 @@ session_start();
 
     $conn = conectar();
 
-    $sql = "INSERT INTO atleta (cpf, nome, nascimento, telefone, email, usuario, senha) VALUES ('$cpf', '$nome', '$nascimento', '$telefone', '$email', '$usuario', '$senha');";
+    $sql = "INSERT INTO atleta (cpf, nome, data_de_nascimento, telefone, email, usuario, senha) VALUES ('$cpf', '$nome', '$nascimento', '$telefone', '$email', '$usuario', '$senha');";
 
     if($conn->query($sql)){
         header ('location: ../_pages/perfil.php?c=Seja+bem+vindo+ '.$nome.'+!');
