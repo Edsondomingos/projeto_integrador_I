@@ -1,7 +1,7 @@
 <?php
 	include './_template/head.php';
 	include './_bd/conexao.php';
-
+	
 	$conn = conectar();
 
 	$sql = "SELECT * FROM evento";
