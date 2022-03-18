@@ -6,7 +6,7 @@
 
 	$conn = conectar();
 
-	$sql = "INSERT INT pagamento (id, forma_pagamento, hora_pagamento, data_pagamento, valor, id_inscricao) VALUES ()"
+	$sql = "INSERT INTO pagamento (id, forma_pagamento, hora_pagamento, data_pagamento, valor, id_inscricao) VALUES ()"
 
 
 

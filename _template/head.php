@@ -99,7 +99,7 @@
 
 		form {
 			text-align: center;
-			width: 250px;
+			width: 300px;
 			margin: auto;
 			padding: 10px;
 			/*margin: 20px;*/

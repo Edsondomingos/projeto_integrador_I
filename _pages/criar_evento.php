@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar Evento</title>
 </head>
-<body>
+<body> -->
     
-
+    <?php include '../_template/head.php'; ?>
     <form action="criar_evento_bd.php" method="post">
 
     <p>
@@ -39,6 +39,6 @@
     <p><input type="submit" value="Cadastrar"></p>
 
     </form>
-
-</body>
-</html>
+    <?php include '../_template/footer.php'; ?>
+<!-- </body>
+</html> -->

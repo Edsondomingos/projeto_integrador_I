@@ -2,14 +2,13 @@
 	include '../_template/head.php';
 
 	// $id_evento = $_GET['id'];
-	// $cpf = $_SESSION['cpf'];
 
 	include '../_bd/conexao.php';
 
 	$conn = conectar();
 
-	// $sql = "SELECT * FROM inscricao WHERE cpf_atleta=$cpf";
-	$sql = "SELECT * FROM inscricao WHERE cpf_atleta=3";
+	// $sql = "SELECT * FROM inscricao WHERE cpf_atleta=$id_evento";
+	$sql = "SELECT * FROM inscricao WHERE cpf_atleta=1 and id_evento=1";//$id_evento";
 
 	$result = $conn->query($sql);
 
@@ -20,12 +19,23 @@
 			echo "<article>";
 			echo "<h2>Evento ".$row['id_evento']."<h2>";
 			echo "<p>N° inscricao:".$row['numero_inscricao']."</p>";
-			echo "<a href='forma_pagamento.php?id=".$row['id_evento']."' class='bt-inscricao'>Pagar</a>";
+			?>
+			<form action="../_bd/forma_pagamento_bd.php" method="post">
+				<p>
+					<label for="boleto">Boleto</label>
+					<input type="radio" name="forma" value="boleto" id="boleto" required>
+				</p>
+				<p>
+					<label for="pix">Pix</label>
+					<input type="radio" name="forma" value="pix" id="pix" required>
+				</p>
+				<input type="submit" value="Pagar" class='bt-inscricao'>
+			</form>
+			<?php 
+			// include 'forma_pagamento.html';
 			echo "</article>";
 		}
 		echo "</section>";
-	} else {
-		echo "<h1>Você não está em nenhum evento</h1>";
 	}
 
 	include '../_template/footer.php';
