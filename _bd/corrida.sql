@@ -17,7 +17,8 @@ CREATE TABLE IF NOT EXISTS evento(
     data_evento DATE NOT NULL,
     imagem VARCHAR(100) NOT NULL,
     descricao VARCHAR(500) NOT NULL,
-    titulo VARCHAR(100) NOT NULL
+    titulo VARCHAR(100) NOT NULL,
+    valor  DECIMAL(7,2) NOT NULL
 
 );
 
