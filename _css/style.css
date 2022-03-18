@@ -7,6 +7,10 @@ body {
 	font-family: Arial;
 }
 
+div {
+	height: 100%;
+}
+
 header {
 	background-image: linear-gradient(to top, #eee, rgba(220, 100, 0, 0.7));
 }
@@ -49,7 +53,10 @@ nav ul li:hover {
 }
 
 main {
-	height: 75vh;
+	height: 100%;
+	display: flex;
+	/*flex-wrap: wrap;*/
+	justify-content: space-around;
 }
 
 a {
@@ -63,18 +70,27 @@ a:hover {
 
 section {
 	display: flex;
+	flex-wrap: wrap;
 	padding: 10px;
 }
 
 article {
+	width: 33%;
 	border: 1px solid black;
 	padding: 10px;
 	margin: 10px;
 	text-align: center;
+
+}
+
+article img {
+	width: 100%;
+	height: 200px;
 }
 
 article p {
 	margin: 10px;
+	text-align: left;
 }
 
 .bt-inscricao {
@@ -88,7 +104,7 @@ article p {
 
 form {
 	text-align: center;
-	width: 250px;
+	width: 300px;
 	margin: auto;
 	padding: 10px;
 	/*margin: 20px;*/
@@ -115,4 +131,21 @@ footer {
 footer p {
 	padding: 20px;
 	background-image: linear-gradient(to top, rgba(220, 100, 0, 0.7), #fff);
+}
+
+/*footer figure {
+	display: flex;
+	justify-content: space-around;
+}
+.img-rodape {
+	 width: 50px;
+	 height: 50px;
+	 background: url('corredor.gif');
+}*/
+
+#preload {
+	position: absolute;
+	background: red;
+	width: 100%;
+	height: 100vh;
 }
