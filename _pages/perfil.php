@@ -13,12 +13,16 @@
 		};
 
 		?>
-		<section>
-		<button><a href="./editar_perfil.php">Alterar Dados</a></button>
-		<button><a href='apagar.php'>Excluir Perfil</a></button>		
+		<section class="bt-perfil">
+		<a href="./editar_perfil.php">
+			<button class="bt-inscricao">Alterar Dados</button></a>
+
+		<a href='../_bd/deletar_perfil.php'>
+			<button class="bt-inscricao">Excluir Perfil</button></a>		
 		</section>
 
-		<section>
+		<section class="perfil">
+		<article>
 		<h2>Dados Cadastrados</h2>
 		
 			<?php
@@ -44,18 +48,18 @@
 					
 				while($row= $result->fetch_assoc()){
                     
-                            echo "<p>Cpf".$row['cpf']."</p>";
-      						echo "<p>Nome".$row['nome']."</p>";
-      						echo "<p>Data de Nascimento".$row['data_de_nascimento']."</p>";
-                            echo "<p>Telefone".$row['telefone']."</p>";
-                            echo "<p>E-Mail".$row['email']."</p>";
-                            echo "<p>Usuário".$row['usuario']."</p>";
-          			        echo "<p>Senha".$row['senha']."</p>";
+                            echo "<p>Cpf: ".$row['cpf']."</p>";
+      						echo "<p>Nome: ".$row['nome']."</p>";
+      						echo "<p>Data de Nascimento: ".$row['data_de_nascimento']."</p>";
+                            echo "<p>Telefone: ".$row['telefone']."</p>";
+                            echo "<p>E-Mail: ".$row['email']."</p>";
+                            echo "<p>Usuário: ".$row['usuario']."</p>";
+          			        echo "<p>Senha: ".$row['senha']."</p>";
 
 					};
 }
 			?>
-		
+	</article>
 	</section>
 	<script type="text/javascript" src="script.js"></script>
 	<?php  include "../_template/footer.php"; ?>

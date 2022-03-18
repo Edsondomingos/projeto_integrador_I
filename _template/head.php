@@ -29,12 +29,12 @@
 		<?php 
 			
 			session_start();
-			echo "<li><a href='".URL()."'>Página inicial</a></li>";			
+			echo "<a href='".URL()."'><li>Página inicial</li></a>";			
 			if (isset($_SESSION['usuario'])){
-				echo "<li><a href='".URL()."_pages/perfil.php'>Perfil</a></li>";
-				echo "<li><a href='".URL()."_pages/criar_evento.php'>Criar evento</a></li>";
-				echo "<li><a href='".URL()."_pages/pagamento.php'>Pagamentos</a></li>";
-				echo "<li><a href='".URL()."/_bd/sair_sessao.php'>Sair</a></li>";
+				echo "<a href='".URL()."_pages/perfil.php'><li>Perfil</li></a>";
+				echo "<a href='".URL()."_pages/criar_evento.php'><li>Criar evento</li></a>";
+				echo "<a href='".URL()."_pages/pagamento.php'><li>Pagamentos</li></a>";
+				echo "<a href='".URL()."/_bd/sair_sessao.php'><li>Sair</li></a>";
 			} else {
 				echo "<li><a href='".URL()."_pages/login.php'>Entrar</a></li>";
 				echo "<li><a href='".URL()."_pages/cadastro.php'>Criar Conta</a></li>";

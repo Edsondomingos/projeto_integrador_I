@@ -29,22 +29,29 @@ nav {
 
 nav ul {
 	display: flex;
-	justify-content: flex-end;
+	justify-content: end;
 	background-image: linear-gradient(to top, rgba(220, 100, 0, 0.7), #eee);
 	border-bottom: 1px solid black;
-	font-size: 30px;
+	/*font-size: 30px;*/
 	height: 40px;
+	margin-top: 2px;
 	position: sticky;
+}
+
+nav ul a {
+	text-align: center;
 }
 
 nav ul li {
 	list-style: none;
-	border: 2px solid black;
-	border-radius: 10% 10% 0 0;
+	/*border: 2px solid black;*/
+	/*border-radius: 10% 10% 0 0;*/
 	border-bottom: 0px;
 	padding: 10px;
 	box-sizing: border-box;
-	color: #444;	
+	color: #444;
+	font-size: 1rem;
+	font-weight: bolder;	
 }
 
 nav ul li:hover {
@@ -62,6 +69,7 @@ main {
 a {
 	text-decoration: none;
 	color: #000;
+	width: 50%;
 }
 
 a:hover {
@@ -100,6 +108,13 @@ article p {
 	color: white;
 	font-weight: bold;
 	margin: auto;
+
+}
+
+.bt-inscricao:hover {
+	border: 2px solid aqua;
+	background-color: white;
+	color: black;
 }
 
 form {
@@ -125,7 +140,7 @@ form input {
 
 /* Rodape */
 footer {
-	margin-top: 20px;
+	/*margin-top: 20px;*/
 	text-align: center;
 }
 
@@ -150,3 +165,33 @@ footer p {
 	width: 100%;
 	height: 100vh;
 }
+
+/*--------- Perfil --------------*/
+
+.bt-perfil  button {
+	width: 100%;
+}
+
+.perfil {
+	justify-content: space-around;
+	/*width: 100%;*/
+}
+
+.perfil article {
+	border: none;
+	width: 100%;
+}
+
+/*--------- Pagamento --------------*/
+
+.pagamento article {
+	width: 50%;
+	border-radius: 7px;
+	background-color: ;
+}
+
+.pagamento form {
+	width: 80%;
+	border: none;
+}
+

@@ -14,7 +14,7 @@
 
 	if ($result->num_rows > 0){
 		echo "<h1>Pagamento</h1>";
-		echo "<section>";
+		echo "<section class='pagamento'>";
 		while ($row = $result->fetch_assoc()){
 			echo "<article>";
 			echo "<h2>Evento ".$row['id_evento']."<h2>";
@@ -22,12 +22,12 @@
 			?>
 			<form action="../_bd/forma_pagamento_bd.php" method="post">
 				<p>
-					<label for="boleto">Boleto</label>
 					<input type="radio" name="forma" value="boleto" id="boleto" required>
+					<label for="boleto">Boleto</label>
 				</p>
 				<p>
-					<label for="pix">Pix</label>
 					<input type="radio" name="forma" value="pix" id="pix" required>
+					<label for="pix">Pix</label>					
 				</p>
 				<input type="submit" value="Pagar" class='bt-inscricao'>
 			</form>
