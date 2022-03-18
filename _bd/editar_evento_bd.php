@@ -14,7 +14,7 @@ $conn = conectar();
 $sql = "UPDATE evento SET titulo='".$titulo."' , local_evento='".$local_evento."' , data_evento='".$data_evento."' , imagem='".$imagem."' , descricao='".$descricao."' WHERE correr=$correr";
 
 if($conn->query($sql)){
-    header ('location:');
+    header ('location: ../_pages/criar_evento.php');
 }else{
     echo "Ocorreu um erro";
 }

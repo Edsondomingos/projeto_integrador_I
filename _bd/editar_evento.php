@@ -42,7 +42,7 @@
     ?>
 
     <h1>Editar Perfil</h1>
-    <form action="../_bd/editar_bd.php" method="post">
+    <form action="../_bd/editar_evento_bd.php" method="post">
     <p>
         <label for="titulo">Titulo</label>
         <input type="text" name="titulo" id="titulo" value="<?php echo $titulo; ?>"/>
