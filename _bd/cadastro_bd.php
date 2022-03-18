@@ -3,7 +3,7 @@ session_start();
 // if(isset($_SESSION['usuario']) and isset($_SESSION['senha'])){
     $cpf = $_POST["cpf"];
     $nome = $_POST["nome"];
-    $nascimento = $_POST["data_de_nascimento"];
+    $nascimento = $_POST["nascimento"];
     $telefone = $_POST["telefone"];
     $email = $_POST["email"];
     $usuario = $_POST["usuario"];
@@ -13,7 +13,7 @@ session_start();
 
     $conn = conectar();
 
-    $sql = "INSERT INTO atleta (cpf, nome, data_de_nascimento, telefone, email, usuario, senha) VALUES ('$cpf', '$nome', '$nascimento', '$telefone', '$email', '$usuario', '$senha');";
+    $sql = "INSERT INTO atleta (cpf, nome, nascimento, telefone, email, usuario, senha) VALUES ('$cpf', '$nome', '$nascimento', '$telefone', '$email', '$usuario', '$senha');";
 
     if($conn->query($sql)){
         header ('location: ../_pages/perfil.php?c=Seja+bem+vindo+ '.$nome.'+!');
