@@ -1,22 +1,21 @@
-<!-- <a href=" index.php" > _  _ _
-        < figura >
-       
-        </ figura >
-    </a> _ _ -->
 
-    <?php   include  "../_template/head.php" ; ?>
 
-    < h1 > Inscrição </ h1 >
+    <?php include  "../_template/head.php" ; ?>
+
+    <h1> Inscrição </h1>
     <!-- <button><a href='../_bd/perfil.php'>Perfil</a></button> -->
     
 
     <?php
-        include '../_template/head.php';
+
         include '../_bd/conexao.php';
+
+        $id = $_GET['id'];
+        // echo $id;
 
         $conn = conectar();
 
-        $sql = "SELECT * FROM evento";
+        $sql = "SELECT * FROM evento WHERE id='$id'";
 
         $result = $conn->query($sql);
         // echo $result->num_row;
@@ -29,7 +28,7 @@
                 echo "<p>Local do Evento:".$row['local_evento']."</p>";
                 echo "<p>Data do evento :".$row['descricao']."</p>";
                 echo "<p>Descrição :".$row['descricao']."</p>";
-                echo "<a href='evento.php?id=".$row['id']."' class='bt-inscricao'>Detalhes</a>";
+                // echo "<a href='evento.php?id=".$row['id']."' class='bt-inscricao'>Detalhes</a>";
                 echo "</article>";
                 
             }
@@ -37,7 +36,7 @@
         }
         //include './_template/footer.php';
     ?>
-    <form  action =" inscriao_bd.php " método =" post " >
+    <form action="../_bd/inscricao.php" método="post">
     <!-- <p>
         <label for="data" >Dados da inscrição</label>
         <input type="date" name="data" id="data" obrigatório>
@@ -58,8 +57,8 @@
         <label for="cpf" >CPF</label>
         <input type="number" name="cpf" id="cpf" obrigatório>
     </p> -->
-
-    < p > < input  type =" submit " value =" " inscrição > < / p >
+    <p><input type="text" name="id_evento" value="<?php echo $id; ?>"></p>
+    <p><input type="submit" value="Inscrever-se" inscrição ></p>
 
     </form>
     <?php   include  "../_template/footer.php" ; ?>
