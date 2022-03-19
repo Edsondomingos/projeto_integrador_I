@@ -4,7 +4,7 @@
     $conn = conectar();
 
     
-    $sql = "SELECT * FROM atleta WHERE usuario ='".$_POST['usuario']."' and cpf = '".$_POST['senha']."';";
+    $sql = "SELECT * FROM atleta WHERE usuario='".$_POST['usuario']."' and senha='".$_POST['senha']."';";
   
     $result = $conn->query($sql);
     if($result->num_rows > 0){

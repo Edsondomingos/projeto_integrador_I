@@ -16,7 +16,7 @@ session_start();
     $sql = "INSERT INTO atleta (cpf, nome, data_de_nascimento, telefone, email, usuario, senha) VALUES ('$cpf', '$nome', '$nascimento', '$telefone', '$email', '$usuario', '$senha');";
 
     if($conn->query($sql)){
-        header ('location: ../_pages/perfil.php?c=Seja+bem+vindo+ '.$nome.'+!');
+        header ('location: ../_pages/login.php?c=Seja+bem+vindo+ '.$nome.'+!');
     }
 
     desconectar($conn);
