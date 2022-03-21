@@ -24,7 +24,7 @@
 			</article>
 			
 		</section>
-		<p style="background:rgba(220, 100, 0, 0.7);">&copy; Alunos do IFCang</p>
+		<p style="background:rgba(220, 100, 0, 0.7); text-align:center;">&copy; Alunos do IFCang</p>
 			
 		<!-- </div> -->
 	</footer>
