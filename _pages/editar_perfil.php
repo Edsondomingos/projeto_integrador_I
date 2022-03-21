@@ -10,13 +10,16 @@
 
     <?php
     
-    $codigo = $_GET["codigo"];
+    session_start();
+    $cpf = $_SESSION['cpf'];
+
+    echo $cpf;
 
     include "../_bd/conexao.php";
 
     $conn = conectar();
 
-    $sql = "SELECT * FROM projeto1 WHERE codigo=".$codigo;
+    $sql = "SELECT * FROM atleta WHERE cpf=".$cpf;
 
     $result = $conn->query($sql);
 

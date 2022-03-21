@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar Evento</title>
 </head>
-<body> -->
+<body>
     
     <?php include '../_template/head.php'; ?>
-    <form action="criar_evento_bd.php" method="post">
+
+    <form action="../_bd/criar_evento_bd.php" method="post">
 
     <p>
         <label for="titulo" >Titulo do Evento:</label>
@@ -36,9 +37,14 @@
         <input type="date" name="data_evento" id="data_evento">
     </p>
 
+    <p>
+        <label for="valor" >Valor da Inscrição</label>
+        <input type="number" name="valor" id="valor">
+    </p>
+
     <p><input type="submit" value="Cadastrar"></p>
 
     </form>
     <?php include '../_template/footer.php'; ?>
-<!-- </body>
-</html> -->
+</body>
+</html>
