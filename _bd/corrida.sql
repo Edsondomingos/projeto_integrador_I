@@ -23,9 +23,8 @@ CREATE TABLE IF NOT EXISTS evento(
 );
 
 CREATE TABLE IF NOT EXISTS inscricao(
-    id int NOT NULL auto_increment PRIMARY KEY,
+    numeroinscricao int NOT NULL auto_increment PRIMARY KEY,
     data_hora_inscricao DATETIME NOT NULL,
-    numero_inscricao VARCHAR(20),
     resultado VARCHAR(10),
     cpf_atleta VARCHAR(11) NOT NULL,
     id_evento int NOT NULL,
@@ -39,7 +38,7 @@ CREATE TABLE IF NOT EXISTS pagamento(
     forma_de_pagamento VARCHAR(50) NOT NULL,
     data_hora_pagamento DATETIME NOT NULL,
     valor DECIMAL(7,2) NOT NULL,
-    id_inscricao int NOT NULL,
-    FOREIGN KEY (id_inscricao) REFERENCES inscricao(id)
+    numeroinscricao_inscricao int NOT NULL,
+    FOREIGN KEY (numeroinscricao_inscricao) REFERENCES inscricao(numeroinscricao)
     
 );
