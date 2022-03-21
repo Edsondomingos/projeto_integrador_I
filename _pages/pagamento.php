@@ -30,7 +30,7 @@
 					<input type="radio" name="forma" value="pix" id="pix" required>
 					<label for="pix">Pix</label>					
 				</p>
-				<input type="submit" value="Pagar" class='bt-inscricao'>
+				<input type="submit" value="Pagar" class='bt-inscricao bt'>
 			</form>
 			<?php 
 			// include 'forma_pagamento.html';
