@@ -8,7 +8,7 @@ body {
 }
 
 div {
-	height: 100%;
+	height: 100vh;
 }
 
 header {
@@ -141,10 +141,15 @@ form input {
 /* Rodape */
 footer {
 	/*margin-top: 20px;*/
-	text-align: center;
+	/* text-align: center; */
 }
 
-footer p {
+footer p::after {
+	text-align: center;
+	
+}
+
+.contato {
 	padding: 20px;
 	background-image: linear-gradient(to top, rgba(220, 100, 0, 0.7), #fff);
 }
@@ -187,7 +192,11 @@ footer p {
 .pagamento article {
 	width: 50%;
 	border-radius: 7px;
-	background-color: ;
+}
+
+.bt {
+	width: 100%;
+	padding: 10px;
 }
 
 .pagamento form {
