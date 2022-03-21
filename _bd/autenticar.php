@@ -11,7 +11,7 @@
         header('Location: ../index.php?bv=Seja+bem+vindo');
         session_start();
         $_SESSION['usuario'] = $_POST["usuario"];
-        $_SESSION['cpf'] = $_POST["senha"];
+        $_SESSION['senha'] = $_POST["senha"];
     }else{
         header('Location: ../_pages/login.php?autenticar=usuario+ou+senha+incorreta,+tente+novamente.');
     };
