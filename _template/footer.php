@@ -9,7 +9,7 @@
 			<img src="<?php echo URL()?>_imgs/corredor.gif" width="50px" height="50px">
 			<img src="<?php echo URL()?>_imgs/corredor.gif" width="50px" height="50px">
 		</figure>
-		<p>&copy; Alunos do IFCan</p>
+		<p>&copy; Alunos do IFCang</p>
 	</footer>
 	</div>
 	<!-- Tela de preload -->

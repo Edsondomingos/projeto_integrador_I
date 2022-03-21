@@ -1,6 +1,6 @@
 <?php
 
-$codigo = $_POST["codigo"];
+$codigo = $_POST["cpf"];
 $nome = $_POST["nome"];
 $cpf = $_POST["cpf"];
 $data_de_nascimento = $_POST["data_de_nascimento"];
@@ -9,14 +9,14 @@ $email = $_POST["email"];
 $senha = $_POST["senha"];
 $usuario = $_POST["usuario"];
 
-include "";
+include "../_bd/conexao.php";
 
 $conn = conectar();
 
-$sql = "UPDATE projeto1 SET nome='".$nome."' , telefone='".$telefone."' , cpf='".$cpf."' , data_de_nascimento='".$data_de_nascimento."' , email='".$email."' , senha='".$senha."' , usuario='".$usuario."' WHERE codigo=$codigo";
+$sql = "UPDATE atleta SET nome='".$nome."', telefone='".$telefone."', data_de_nascimento='".$data_de_nascimento."', email='".$email."', senha='".$senha."', usuario='".$usuario."' WHERE codigo=$cpf";
 
 if($conn->query($sql)){
-    header ('location:');
+    header ('location: ../_pages/perfil.php');
 }else{
     echo "Ocorreu algum erro";
 }
