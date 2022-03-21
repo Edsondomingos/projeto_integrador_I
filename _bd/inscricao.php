@@ -8,7 +8,7 @@
     $resultado = 'vazio';
     $cpf = $_SESSION['cpf'];
     $id_evento = $_GET['id_evento'];
-    echo $numeroinscricao;
+   // echo $numeroinscricao;
     echo $resultado;
     echo $cpf;
     echo $id_evento;
@@ -18,7 +18,7 @@
     $conn = conectar();
 
     // $sql = "INSERT INTO inscricao (data_hora_inscricao, numero_inscricao, resultado, cpf) VALORES (NOW(), '$numero_inscricao', '$resultado', '$cpf_atleta');" ;
-    $sql = "INSERT INTO inscricao (data_hora_inscricao, numeroinscricao, resultado, cpf_atleta, id_evento) VALUES (NOW(), '$resultado', '$cpf','$id_evento');";
+    $sql = "INSERT INTO inscricao (numeroinscricao, data_hora_inscricao, resultado, cpf_atleta, id_evento) VALUES ('', NOW(), '$resultado', '$cpf','$id_evento');";
 
     if ($conn->query($sql)) {
         header('Location: ../inscricao.php?c=Inscrição+realizada+com+sucesso');
