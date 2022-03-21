@@ -5,7 +5,7 @@ $data_evento = $_POST["data_evento"];
 $imagem = $_POST["imagem"];
 $descricao = $_POST["descricao"];
 $titulo = $_POST["titulo"];
-$valor = $_POST["valor"];
+//$valor = $_POST["valor"];
 
 echo $titulo, $descricao, $data_evento, $local_evento, $imagem;
 

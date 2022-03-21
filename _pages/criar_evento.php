@@ -39,7 +39,7 @@
 
     <p>
         <label for="valor" >Valor da Inscrição</label>
-        <input type="number" name="valor" id="valor">
+        <input type="number" name="valor" id="valor" >
     </p>
 
     <p><input type="submit" value="Cadastrar"></p>
