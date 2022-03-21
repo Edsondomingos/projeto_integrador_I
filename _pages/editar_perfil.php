@@ -10,8 +10,8 @@
 
     <?php
     
-    session_start();
-    $cpf = $_SESSION['cpf'];
+    //session_start();
+    $cpf = $_GET["cpf"];
 
     echo $cpf;
 
@@ -34,7 +34,7 @@
     if($result->num_rows > 0){
         while($row = $result->fetch_assoc()){
             $nome = $row["nome"];
-            $cpf = $row["cpf"];
+            //$cpf = $row["cpf"];
             $data_de_nascimento = $row["data_de_nascimento"];
             $telefone = $row["telefone"];
             $email = $row["email"];
@@ -59,7 +59,7 @@
         <input type="text" name="cpf" id="cpf" value="<?php echo $cpf; ?>"/>
     </p>
     <p>
-        <label for="data">Data de Nasciemto</label>
+        <label for="data_de_nascimento">Data de Nasciemto</label>
         <input type="date" name="data_de_nascimento" id="data_de_nascimento" value="<?php echo $data_de_nascimento; ?>" />
     </p>
     <p>

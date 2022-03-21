@@ -18,7 +18,7 @@
     </p>
 
     <p>
-        <label for="descricao" >Descrição do Evento:</label>
+        <label for="descricao">Descrição do Evento:</label>
         <input type="text" name="descricao" id="descricao">
     </p>
 
