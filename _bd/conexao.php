@@ -2,7 +2,7 @@
 	function conectar(){
 		$servidor = "localhost";
 		$usuario = "root";
-		$senha = "root";
+		$senha = "";
 		$banco = "corrida";
 
 		$conn = new mysqli($servidor, $usuario, $senha, $banco);

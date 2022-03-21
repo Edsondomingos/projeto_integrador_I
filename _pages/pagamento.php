@@ -18,7 +18,8 @@
 		while ($row = $result->fetch_assoc()){
 			echo "<article>";
 			echo "<h2>Evento ".$row['id_evento']."<h2>";
-			echo "<p>N° inscricao:".$row['numero_inscricao']."</p>";
+			echo "<p>Cpf:  ".$row['cpf_atleta']."<p>";
+			echo "<p>Inscricao: ".$row['numero_inscricao']."</p>";
 			?>
 			<form action="../_bd/forma_pagamento_bd.php" method="post">
 				<p>
