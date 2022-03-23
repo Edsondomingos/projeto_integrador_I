@@ -1,20 +1,18 @@
 <?php
 
-$perfil = $_GET["cpf"];
+    include "conexao.php";
 
-include "conexao.php";
+    $conn = conectar();
 
-$conn = conectar();
+    $sql = "DELETE FROM atleta WHERE usuario='".$_SESSION['usuario']."' and senha='".$_SESSION['senha']."';";
 
-$sql = "DELETE FROM atleta WHERE cpf=".$perfil;
+    if($conn->query($sql)){
+        header ('location: sair_sessao.php');
+    }else{
+        echo "Deu erro!";
+        echo $conn->error;
+    }
 
-if($conn->query($sql)){
-    header ('location: perfil.php');
-}else{
-    echo "Deu erro!";
-    echo $conn->error;
-}
-
-desconectar($conn);
+    desconectar($conn);
 
 ?>

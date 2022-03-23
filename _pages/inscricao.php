@@ -1,19 +1,23 @@
 
 
-    <?php include  "../_template/head.php" ; ?>
+    <?php 
+        include  "../_template/head.php" ; 
+        include '../_bd/conexao.php';
+        $conn = conectar();
+    ?>
 
     <h1> Inscrição </h1>
     <!-- <button><a href='../_bd/perfil.php'>Perfil</a></button> -->
     
-    <form action="../_bd/inscricao.php" método="post">
+    <article>
     <?php
 
-        include '../_bd/conexao.php';
+        
 
         $id = $_GET['id'];
         // echo $id;
 
-        $conn = conectar();
+        
 
         $sql = "SELECT * FROM evento WHERE id='$id'";
 
@@ -60,7 +64,21 @@
         <input type="number" name="cpf" id="cpf" obrigatório>
     </p> -->
     <p><input type="hidden" name="id" value="<?php echo $id; ?>"></p>
-    <p><input type="submit" value="Inscrever-se" inscrição class="bt-inscricao bt"></p>
+    <?php 
+        $verificar = "SELECT cpf_atleta FROM inscricao WHERE id_evento='$id';";
+        if ($conn->query($verificar)->num_rows <= 0){
+            echo '<form action="../_bd/inscricao.php" método="post">';
+            echo '<p><input type="hidden" name="id" value="'.$id.'"></p>';
+            echo '<p><input type="submit" value="Inscrever-se" inscrição class="bt-inscricao bt"></p>';
+            echo '</form>';
+        } else {
+            echo '<form action="../_bd/cancelar_inscricao.php" método="post">';
+            echo '<p><input type="hidden" name="id" value="'.$id.'"></p>';
+            echo '<p><input type="submit" value="Cancelar inscrição" class="bt-inscricao"></p>';
+            echo '</form>';
+        }
+    ?>
+    </article>
+    <!-- <p><input type="submit" value="Inscrever-se" inscrição class="bt-inscricao bt"></p> -->
 
-    </form>
     <?php   include  "../_template/footer.php" ; ?>

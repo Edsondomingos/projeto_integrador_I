@@ -16,11 +16,11 @@
 
     $conn = conectar();
 
-    $cpf = "SELECT cpf FROM atleta WHERE usuario='".$_SESSION['usuario']."' and senha='".$_SESSION['senha']."';";
-    $buscaCpf = $conn->query($cpf)->num_rows;
+    $cpf = "(SELECT cpf FROM atleta WHERE usuario='".$_SESSION['usuario']."' and senha='".$_SESSION['senha']."')";
+    // $buscaCpf = $conn->query($cpf)->num_rows;
 
     // $sql = "INSERT INTO inscricao (data_hora_inscricao, numero_inscricao, resultado, cpf) VALORES (NOW(), '$numero_inscricao', '$resultado', '$cpf_atleta');" ;
-    $sql = "INSERT INTO inscricao (numeroinscricao, data_hora_inscricao, resultado, cpf_atleta, id_evento) VALUES ('', NOW(), '$resultado', '$buscaCpf','$id');";
+    $sql = "INSERT INTO inscricao (numeroinscricao, data_hora_inscricao, resultado, cpf_atleta, id_evento) VALUES ('', NOW(), '$resultado', $cpf,'$id');";
 
     if ($conn->query($sql)) {
         header('Location: ../_pages/inscricao.php?id='.$id.'&c=Inscrição+realizada+com+sucesso');
