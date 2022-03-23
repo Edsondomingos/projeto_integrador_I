@@ -5,7 +5,7 @@
     <h1> Inscrição </h1>
     <!-- <button><a href='../_bd/perfil.php'>Perfil</a></button> -->
     
-
+    <form action="../_bd/inscricao.php" método="post">
     <?php
 
         include '../_bd/conexao.php';
@@ -24,10 +24,12 @@
             while ($row = $result->fetch_assoc()){
                 
                 echo "<article>";
-                echo "<p>Titulo :".$row['titulo']."</p>";
-                echo "<p>Local do Evento:".$row['local_evento']."</p>";
-                echo "<p>Data do evento :".$row['descricao']."</p>";
-                echo "<p>Descrição :".$row['descricao']."</p>";
+                echo $row['imagem'];
+                echo "<p>Titulo: ".$row['titulo']."</p>";
+                echo "<p>Local do Evento: ".$row['local_evento']."</p>";
+                echo "<p>Data do evento: ".$row['descricao']."</p>";
+                echo "<p>Descrição: ".$row['descricao']."</p>";
+                echo "<p>Valor: ".$row['valor']."</p>";
                 // echo "<a href='evento.php?id=".$row['id']."' class='bt-inscricao'>Detalhes</a>";
                 echo "</article>";
                 
@@ -36,7 +38,7 @@
         }
         //include './_template/footer.php';
     ?>
-    <form action="../_bd/inscricao.php" método="post">
+    
     <!-- <p>
         <label for="data" >Dados da inscrição</label>
         <input type="date" name="data" id="data" obrigatório>
@@ -57,8 +59,8 @@
         <label for="cpf" >CPF</label>
         <input type="number" name="cpf" id="cpf" obrigatório>
     </p> -->
-    <p><input type="text" name="id_evento" value="<?php echo $id; ?>"></p>
-    <p><input type="submit" value="Inscrever-se" inscrição ></p>
+    <p><input type="hidden" name="id" value="<?php echo $id; ?>"></p>
+    <p><input type="submit" value="Inscrever-se" inscrição class="bt-inscricao bt"></p>
 
     </form>
     <?php   include  "../_template/footer.php" ; ?>

@@ -36,8 +36,8 @@
 				echo "<a href='".URL()."_pages/pagamento.php'><li>Pagamentos</li></a>";
 				echo "<a href='".URL()."/_bd/sair_sessao.php'><li>Sair</li></a>";
 			} else {
-				echo "<li><a href='".URL()."_pages/login.php'>Entrar</a></li>";
-				echo "<li><a href='".URL()."_pages/cadastro.php'>Criar Conta</a></li>";
+				echo "<a href='".URL()."_pages/login.php'><li>Entrar</li></a>";
+				echo "<a href='".URL()."_pages/cadastro.php'><li>Criar Conta</li></a>";
 			}
 		?>
 			

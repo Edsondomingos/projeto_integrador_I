@@ -6,25 +6,27 @@
     // $cpf = $_POST[ "cpf" ];
    // $numeroinscricao = 'N Inscrição';
     $resultado = 'vazio';
-    $cpf = $_SESSION['cpf'];
-    $id_evento = $_GET['id_evento'];
+    
+    $id = $_GET['id'];
    // echo $numeroinscricao;
-    echo $resultado;
-    echo $cpf;
-    echo $id_evento;
+    // echo $resultado;
+    // echo "id-evento".$id_evento;
 
     include "conexao.php";
 
     $conn = conectar();
 
+    $cpf = "SELECT cpf FROM atleta WHERE usuario='".$_SESSION['usuario']."' and senha='".$_SESSION['senha']."';";
+    $buscaCpf = $conn->query($cpf)->num_rows;
+
     // $sql = "INSERT INTO inscricao (data_hora_inscricao, numero_inscricao, resultado, cpf) VALORES (NOW(), '$numero_inscricao', '$resultado', '$cpf_atleta');" ;
-    $sql = "INSERT INTO inscricao (numeroinscricao, data_hora_inscricao, resultado, cpf_atleta, id_evento) VALUES ('', NOW(), '$resultado', '$cpf','$id_evento');";
+    $sql = "INSERT INTO inscricao (numeroinscricao, data_hora_inscricao, resultado, cpf_atleta, id_evento) VALUES ('', NOW(), '$resultado', '$buscaCpf','$id');";
 
     if ($conn->query($sql)) {
-        header('Location: ../inscricao.php?c=Inscrição+realizada+com+sucesso');
-     } //else {
-    //     header('Location: ../_pages/inscricao.php?id='.$id_evento);
-    // }
+        header('Location: ../_pages/inscricao.php?id='.$id.'&c=Inscrição+realizada+com+sucesso');
+     } else {
+        die();
+    }
 
     desconectar($conn);
 

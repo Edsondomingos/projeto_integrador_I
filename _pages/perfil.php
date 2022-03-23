@@ -38,10 +38,10 @@
 
 				include "../_bd/conexao.php";
 
-				$cpf = $_SESSION['cpf'];
+				$usuario = $_SESSION['usuario'];
 				$conn = conectar();
 
-				$sql = "SELECT * FROM atleta WHERE cpf='$cpf';";
+				$sql = "SELECT * FROM atleta WHERE usuario='$usuario';";
 
 				$result = $conn->query($sql);
 				echo "<ul>";

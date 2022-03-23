@@ -19,7 +19,7 @@
 			echo "<article>";
 			echo "<h2>Evento ".$row['id_evento']."<h2>";
 			echo "<p>Cpf:  ".$row['cpf_atleta']."<p>";
-			echo "<p>Inscricao: ".$row['numero_inscricao']."</p>";
+			echo "<p>Inscricao: ".$row['numeroinscricao']."</p>";
 			?>
 			<form action="../_bd/forma_pagamento_bd.php" method="post">
 				<p>
