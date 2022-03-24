@@ -7,7 +7,8 @@ CREATE TABLE IF NOT EXISTS atleta(
     telefone VARCHAR(11) NOT NULL,
     email VARCHAR(100) NOT NULL,
     usuario VARCHAR(30) NOT NULL,
-    senha VARCHAR(30) NOT NULL
+    senha VARCHAR(30) NOT NULL,
+    imagem VARCHAR(20) DEFAULT 'padrao.png' NOT NULL
 
 );
 
