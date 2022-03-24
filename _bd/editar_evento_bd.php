@@ -8,13 +8,12 @@ $descricao = $_POST["descricao"];
 $titulo = $_POST["titulo"];
 $valor = $_POST["valor"];
 
-echo $titulo, $descricao, $data_evento, $local_evento, $imagem;
 
 include "conexao.php";
 
 $conn = conectar();
 
-$sql = " UPDATE evento SET titulo='".$titulo."', local_evento='".$local_evento."' , data_evento='".$data_evento."', imagem='".$imagem."', descricao='".$descricao."', valor='".$valor."'  WHERE id=.$id ";
+$sql = " UPDATE evento SET titulo='".$titulo."', local_evento='".$local_evento."' , data_evento='".$data_evento."', imagem='".$imagem."', descricao='".$descricao."', valor='".$valor."'  WHERE id=$id ";
 
 if($conn->query($sql)){
     header ('location: ../_pages/criar_evento.php');

@@ -45,7 +45,7 @@
     ?>
 
     <h1>Editar Evento</h1>
-    <form action="../_bd/editar_evento_bd.php" method="post">
+    <form method="post" action="../_bd/editar_evento_bd.php?id=<?php echo $id; ?>" >
 
     <p>
         <label for="titulo" >Titulo do Evento:</label>
