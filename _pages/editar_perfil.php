@@ -13,7 +13,6 @@
     //session_start();
     $cpf = $_GET["cpf"];
 
-    echo $cpf;
 
     include "../_bd/conexao.php";
 
@@ -34,7 +33,7 @@
     if($result->num_rows > 0){
         while($row = $result->fetch_assoc()){
             $nome = $row["nome"];
-            //$cpf = $row["cpf"];
+            $cpf = $row["cpf"];
             $data_de_nascimento = $row["data_de_nascimento"];
             $telefone = $row["telefone"];
             $email = $row["email"];
@@ -49,7 +48,7 @@
     ?>
 
     <h1>Editar Perfil</h1>
-    <form action="../_bd/editar_bd.php" method="post">
+    <form action="../_bd/editar_bd.php?id=<?php echo $cpf; ?>" method="post">
     <p>
         <label for="nome">Nome</label>
         <input type="text" name="nome" id="nome" value="<?php echo $nome; ?>"/>
@@ -81,7 +80,7 @@
         <label for="usuario">Usuário</label>
         <input type="text" name="usuario" id="usuario" value="<?php echo $usuario; ?>" />
     </p>
-
+    <input type="hidden" name="cpf" value="<?php echo $cpf; ?>" />
     <p>
         <input type="submit" value="Editar">
     </p>

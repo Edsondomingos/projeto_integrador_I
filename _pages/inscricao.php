@@ -31,7 +31,7 @@
                 echo $row['imagem'];
                 echo "<p>Titulo: ".$row['titulo']."</p>";
                 echo "<p>Local do Evento: ".$row['local_evento']."</p>";
-                echo "<p>Data do evento: ".$row['descricao']."</p>";
+                echo "<p>Data do evento: ".$row['data_evento']."</p>";
                 echo "<p>Descrição: ".$row['descricao']."</p>";
                 echo "<p>Valor: ".$row['valor']."</p>";
                 // echo "<a href='evento.php?id=".$row['id']."' class='bt-inscricao'>Detalhes</a>";
