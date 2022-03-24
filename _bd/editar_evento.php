@@ -49,34 +49,34 @@
 
     <p>
         <label for="titulo" >Titulo do Evento:</label>
-        <input type="text" name="titulo" id="titulo">
+        <input type="text" name="titulo" id="titulo" value="<?php echo $titulo; ?>"/>
     </p>
 
     <p>
         <label for="descricao">Descrição do Evento:</label>
-        <input type="text" name="descricao" id="descricao">
+        <input type="text" name="descricao" id="descricao" value="<?php echo $descricao; ?>"/>
     </p>
 
     <p>
         <label for="local_evento" >Local do Evento</label>
-        <input type="text" name="local_evento" id="local_evento">
+        <input type="text" name="local_evento" id="local_evento" value="<?php echo $local_evento; ?>"/>
     </p>
 
     <p>
         <label for="imagem" >Imagem:</label>
-        <input type="file" name="imagem" id="imagem">
+        <input type="file" name="imagem" id="imagem" value="<?php echo $imagem; ?>"/>
     </p>
 
     <p>
         <label for="data_evento" >Data do Evento</label>
-        <input type="date" name="data_evento" id="data_evento">
+        <input type="date" name="data_evento" id="data_evento" value="<?php echo $data_evento; ?>"/>
     </p>
 
     <p>
         <label for="valor" >Valor da Inscrição</label>
-        <input type="number" name="valor" id="valor">
+        <input type="number" name="valor" id="valor" value="<?php echo $valor; ?>"/>
     </p>
-
+    <input type="hidden" name="id" value="<?php echo $id; ?>" />
     <p>
         <input type="submit" value="Editar">
     </p>
