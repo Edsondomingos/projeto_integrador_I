@@ -81,7 +81,7 @@
         $verificriador = "SELECT criador FROM evento WHERE criador='".$_SESSION['cpf']."';";
         // $compara = $conn->query($verificar) == $_SESSION['cpf'];
         if ($conn->query($verificriador)->num_rows > 0){
-           echo '<input type="submit" value="Editar" name="Editar" class="bt-inscricao bt">';  
+           echo '<a href="../_bd/editar_evento.php?id='.$id.'" class="bt-inscricao bt">Editar Evento</a>';  
 
         }
         
