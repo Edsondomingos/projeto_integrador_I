@@ -77,6 +77,18 @@
             echo '<p><input type="submit" value="Cancelar inscrição" class="bt-inscricao"></p>';
             echo '</form>';
         }
+
+        $verificriador = "SELECT criador FROM evento WHERE criador='".$_SESSION['cpf']."';";
+        // $compara = $conn->query($verificar) == $_SESSION['cpf'];
+        if ($conn->query($verificriador)->num_rows > 0){
+           echo '<input type="submit" value="Editar" name="Editar" class="bt-inscricao bt">';  
+
+        }
+        
+
+
+
+
     ?>
     </article>
     <!-- <p><input type="submit" value="Inscrever-se" inscrição class="bt-inscricao bt"></p> -->

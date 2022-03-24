@@ -16,7 +16,7 @@
 
     $conn = conectar();
 
-    $cpf = "(SELECT cpf FROM atleta WHERE usuario='".$_SESSION['usuario']."' and senha='".$_SESSION['senha']."')";
+    $cpf = "(SELECT cpf FROM atleta WHERE usuario='".$_SESSION['usuario']."' and cpf='".$_SESSION['cpf']."')";
     // $buscaCpf = $conn->query($cpf)->num_rows;
 
     // $sql = "INSERT INTO inscricao (data_hora_inscricao, numero_inscricao, resultado, cpf) VALORES (NOW(), '$numero_inscricao', '$resultado', '$cpf_atleta');" ;
