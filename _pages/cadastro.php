@@ -9,7 +9,7 @@
           <p>
             <label for="cpf"> 
                  <span>CPF</span>    
-                 <input type="text" id="cpf" name="cpf" placeholder="Digite seu CPF" required/>             
+                 <input type="number" id="cpf" name="cpf" placeholder="Apenas números" required/>             
             </label>
           </p>    
             
@@ -25,7 +25,7 @@
           <p>
             <label for="nascimento">
                 <span>Data de Nascimento</span>
-                <input type="date" id="data" name="nascimento">
+                <input type="date" id="data" name="nascimento" required>
             </label>
           </p>    
             
