@@ -19,7 +19,8 @@ CREATE TABLE IF NOT EXISTS evento(
     descricao VARCHAR(500) NOT NULL,
     titulo VARCHAR(100) NOT NULL,
     valor  DECIMAL(7,2) NOT NULL,
-    criador VARCHAR(11) NOT NULL
+    criador VARCHAR(11) NOT NULL,
+    FOREIGN KEY (criador) REFERENCES atleta(cpf)
 
 );
 
