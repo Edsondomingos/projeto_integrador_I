@@ -48,15 +48,17 @@
             echo '<form action="../_bd/cancelar_inscricao.php" método="post">';
             echo '<p><input type="hidden" name="id" value="'.$id.'"></p>';
             echo '<p><input type="submit" value="Cancelar inscrição" class="bt"></p>';
+            echo '<br><a href="../_pages/pagamento.php?id='.$id.'" class=" bt">Pagamento</a></br>'; 
             echo '</form>';
+            
         }
 
         $verificriador = "SELECT criador FROM evento WHERE criador='".$_SESSION['cpf']."';";
         
         if ($conn->query($verificriador)->num_rows > 0){
            echo '<br><a href="../_bd/editar_evento.php?id='.$id.'" class=" bt">Editar Evento</a></br>';
-           echo '<br><a href="../_bd/deletar_evento.php?id='.$id.'" class=" bt">Deletar evento</a></br>';   
-
+           echo '<br><a href="../_bd/deletar_evento.php?id='.$id.'" class=" bt">Deletar evento</a></br>'; 
+           
         }
         
 

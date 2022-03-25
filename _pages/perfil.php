@@ -15,8 +15,7 @@
 		?>
 		<section class="secao">
 		<article class="">
-		<a href="./editar_perfil.php">
-			<button class="bt">Alterar Dados</button></a>
+		
 		</article>	
 		</section>
 
@@ -83,6 +82,9 @@
 					<label for="foto-perfil"><img src="../_imgs/<?php echo $img; ?>" style="border-radius: 10px">Click na foto para mudar</label>
 					<input type="file" name="file" id='foto-perfil' style="display: none;" />
 					<input type="submit" name="enviaFoto" value="Mudar foto" class="bt">
+					<a href="editar_perfil.php" class="bt">Alterar Dados
+			          <!-- <button></button> -->
+					</a>
 				</form>
 				<p></p>
 				<p>Cpf: <?php echo $cpf; ?>.</p>
