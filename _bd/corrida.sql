@@ -20,7 +20,7 @@ CREATE TABLE IF NOT EXISTS evento(
     descricao VARCHAR(500) NOT NULL,
     titulo VARCHAR(100) NOT NULL,
     valor  DECIMAL(7,2) NOT NULL,
-    criador VARCHAR(11) NOT NULL,
+    criador VARCHAR(14) NOT NULL,
     FOREIGN KEY (criador) REFERENCES atleta(cpf)
 
 );
@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS inscricao(
     numeroinscricao int NOT NULL auto_increment PRIMARY KEY,
     data_hora_inscricao DATETIME NOT NULL,
     resultado VARCHAR(10),
-    cpf_atleta VARCHAR(11) NOT NULL,
+    cpf_atleta VARCHAR(14) NOT NULL,
     id_evento int NOT NULL,
     FOREIGN KEY (cpf_atleta) REFERENCES atleta(cpf),
     FOREIGN KEY (id_evento) REFERENCES evento(id)

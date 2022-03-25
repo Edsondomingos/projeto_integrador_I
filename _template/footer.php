@@ -31,9 +31,15 @@
 
 	<script type="text/javascript" src="<?php echo URL();?>_js/script.js"></script>
 	<!-- Tela de preload -->
-	<!-- <div id="preload">
+
+	<script type="text/javascript" src="./_js/script.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	
+
+	<div id="preload">
 		<img src="<?php echo URL() ?>_imgs/corredor.gif" />
 	</div>
+
 	<script type="text/javascript">
 		$(window).on('load', function(){
 			$('#preload').fadeOut(2000).hide();
@@ -42,6 +48,6 @@
 			$('body').fadeIn(1000).hide();
 		})
 		
-	</scri pt>-->
+	</script>
 </body>
 </html>

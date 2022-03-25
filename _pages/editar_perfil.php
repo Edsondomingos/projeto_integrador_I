@@ -22,12 +22,12 @@
 
     $conn = conectar();
 
-    $sql = "SELECT * FROM atleta WHERE cpf=".$cpf;
+    $sql = "SELECT * FROM atleta WHERE cpf='".$cpf."';";
 
     $result = $conn->query($sql);
 
     $nome ="nome";
-    $cpf ="cpf";
+    //$cpf ="cpf";
     $data_de_nascimento ="data_de_nascimento";
     $telefone ="telefone";
     $email ="email";
