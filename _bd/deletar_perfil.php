@@ -2,7 +2,7 @@
 
 $cpf = $_GET['cpf'];
 
-    include "../_bd/conexao.php";
+    include "conexao.php";
 
     $conn = conectar();
 

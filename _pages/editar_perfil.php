@@ -15,24 +15,24 @@
     include "../_template/head.php";
 
     
-    $cpf = $_SESSION["cpf"];
+    $cpf_sessao = $_SESSION["cpf"];
 
 
     include "../_bd/conexao.php";
 
     $conn = conectar();
 
-    $sql = "SELECT * FROM atleta WHERE cpf='".$cpf."';";
+    $sql = "SELECT * FROM atleta WHERE cpf='".$cpf_sessao."';";
 
     $result = $conn->query($sql);
 
-    $nome ="nome";
-    //$cpf ="cpf";
-    $data_de_nascimento ="data_de_nascimento";
-    $telefone ="telefone";
-    $email ="email";
-    $senha ="senha";
-    $usuario ="usuario";
+    $nome ="";
+    $cpf ="";
+    $data_de_nascimento ="";
+    $telefone ="";
+    $email ="";
+    $senha ="";
+    $usuario ="";
 
     if($result->num_rows > 0){
         while($row = $result->fetch_assoc()){
@@ -52,7 +52,7 @@
     ?>
 
     <h1>Editar Perfil</h1>
-    <form action="../_bd/editar_bd.php?cpf=<?php echo $cpf; ?>" method="post" class="formulario">
+    <form action="../_bd/editar_bd.php" method="post" class="formulario">
     <p>
         <label for="nome">Nome</label>
         <input type="text" name="nome" id="nome" value="<?php echo $nome; ?>"/>
@@ -84,7 +84,7 @@
         <label for="usuario">Usuário</label>
         <input type="text" name="usuario" id="usuario" value="<?php echo $usuario; ?>" />
     </p>
-    <input type="hidden" name="cpf" value="<?php echo $cpf; ?>" />
+    <input type="hidden" name="cpf_atual" value="<?php echo $cpf; ?>" />
     <p>
         <input type="submit" value="Editar" class="bt">
     </p>
