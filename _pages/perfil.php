@@ -17,9 +17,6 @@
 		<article class="">
 		<a href="./editar_perfil.php">
 			<button class="bt">Alterar Dados</button></a>
-
-		<a href='../_bd/deletar_perfil.php'>
-			<button class="bt">Excluir Perfil</button></a>
 		</article>	
 		</section>
 
