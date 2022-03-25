@@ -19,7 +19,7 @@ if($conn->query($sql)){
     header ('location: ../_pages/perfil.php');
 }else{
     echo "Ocorreu algum erro";
+    echo $conn->error;
 }
 
-desconectar($conn);
-?>
+desconectar($conn);?>
