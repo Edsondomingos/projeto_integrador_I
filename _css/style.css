@@ -129,6 +129,7 @@ a {
 .button-inputs {
 	border: none;
 	padding: 5px 20px;
+	width: 50%;
 }
 
 #corredor-rodape {
