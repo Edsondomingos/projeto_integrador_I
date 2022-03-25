@@ -54,7 +54,8 @@
         $verificriador = "SELECT criador FROM evento WHERE criador='".$_SESSION['cpf']."';";
         
         if ($conn->query($verificriador)->num_rows > 0){
-           echo '<a href="../_bd/editar_evento.php?id='.$id.'" class=" bt">Editar Evento</a>';  
+           echo '<a href="../_bd/editar_evento.php?id='.$id.'" class=" bt">Editar Evento</a>';
+           echo '<a href="../_bd/deletar_evento.php?id='.$id.'" class=" bt">Deletar evento</a>';   
 
         }
         
