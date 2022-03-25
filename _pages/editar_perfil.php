@@ -5,12 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar Perfil</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+    <script type="text/javascript">
+
+        $("#cpf").mask("000.000.000-00");
+        $("#telefone").mask("(00)00000-0000");
+
+    </script>
+
 </head>
 <body>
 
     <?php
     
-    //session_start();
     $cpf = $_GET["cpf"];
 
 
@@ -63,7 +72,7 @@
     </p>
     <p>
         <label for="telefone">Telefone</label>
-        <input type="number" name="telefone" id="telefone" value="<?php echo $telefone; ?>"/>
+        <input type="number" name="telefone" id="telefone" maxlength="14" value="<?php echo $telefone; ?>"/>
     </p>
 
     <p>
