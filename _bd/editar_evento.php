@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar Perfil</title>
-</head>
-<body>
-
     <?php
+
+    include "../_template/head.php";
     
     $id = $_GET["id"];
 
@@ -45,7 +37,7 @@
     ?>
 
     <h1>Editar Evento</h1>
-    <form action="../_bd/editar_evento_bd.php" method="post">
+    <form method="post" action="../_bd/editar_evento_bd.php?id=<?php echo $id; ?>" class="formulario">
 
     <p>
         <label for="titulo" >Titulo do Evento:</label>
@@ -78,8 +70,9 @@
     </p>
     <input type="hidden" name="id" value="<?php echo $id; ?>" />
     <p>
-        <input type="submit" value="Editar">
+        <input type="submit" value="Editar" class="bt">
     </p>
     </form>
-</body>
-</html>
+
+<?php 
+    include "../_template/footer.php" ?>

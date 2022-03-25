@@ -1,6 +1,6 @@
 <?php
 
-$codigo = $_POST["cpf"];
+$cpf = $_GET["cpf"];
 $nome = $_POST["nome"];
 $cpf = $_POST["cpf"];
 $data_de_nascimento = $_POST["data_de_nascimento"];
@@ -13,7 +13,7 @@ include "../_bd/conexao.php";
 
 $conn = conectar();
 
-$sql = "UPDATE atleta SET nome='".$nome."', telefone='".$telefone."', data_de_nascimento='".$data_de_nascimento."', email='".$email."', senha='".$senha."', usuario='".$usuario."' WHERE codigo=$cpf";
+$sql = "UPDATE atleta SET nome='".$nome."', telefone='".$telefone."', data_de_nascimento='".$data_de_nascimento."', email='".$email."', senha='".$senha."', usuario='".$usuario."' WHERE cpf=$cpf";
 
 if($conn->query($sql)){
     header ('location: ../_pages/perfil.php');

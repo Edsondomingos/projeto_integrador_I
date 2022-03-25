@@ -1,19 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar Perfil</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+    <script type="text/javascript">
+
+        $("#cpf").mask("000.000.000-00");
+        $("#telefone").mask("(00)00000-0000");
+
+    </script>
+
 </head>
 <body>
 
     <?php
-    
-    //session_start();
-    $cpf = $_GET["cpf"];
 
-    echo $cpf;
+    include "../_template/head.php";
+
+    
+    $cpf = $_SESSION["cpf"];
+
 
     include "../_bd/conexao.php";
 
@@ -34,7 +37,7 @@
     if($result->num_rows > 0){
         while($row = $result->fetch_assoc()){
             $nome = $row["nome"];
-            //$cpf = $row["cpf"];
+            $cpf = $row["cpf"];
             $data_de_nascimento = $row["data_de_nascimento"];
             $telefone = $row["telefone"];
             $email = $row["email"];
@@ -49,14 +52,14 @@
     ?>
 
     <h1>Editar Perfil</h1>
-    <form action="../_bd/editar_bd.php" method="post">
+    <form action="../_bd/editar_bd.php?cpf=<?php echo $cpf; ?>" method="post" class="formulario">
     <p>
         <label for="nome">Nome</label>
         <input type="text" name="nome" id="nome" value="<?php echo $nome; ?>"/>
     </p>
     <p>
         <label for="cpf">CPF</label>
-        <input type="text" name="cpf" id="cpf" value="<?php echo $cpf; ?>"/>
+        <input type="text" name="cpf" id="cpf" maxlength="14" value="<?php echo $cpf; ?>"/>
     </p>
     <p>
         <label for="data_de_nascimento">Data de Nasciemto</label>
@@ -64,7 +67,7 @@
     </p>
     <p>
         <label for="telefone">Telefone</label>
-        <input type="number" name="telefone" id="telefone" value="<?php echo $telefone; ?>"/>
+        <input type="text" name="telefone" id="telefone" maxlength="14" value="<?php echo $telefone; ?>"/>
     </p>
 
     <p>
@@ -81,10 +84,10 @@
         <label for="usuario">Usuário</label>
         <input type="text" name="usuario" id="usuario" value="<?php echo $usuario; ?>" />
     </p>
-
+    <input type="hidden" name="cpf" value="<?php echo $cpf; ?>" />
     <p>
-        <input type="submit" value="Editar">
+        <input type="submit" value="Editar" class="bt">
     </p>
     </form>
-</body>
-</html>
+
+     <?php include "../_template/footer.php"; ?>

@@ -9,10 +9,10 @@
 	$result = $conn->query($sql);
 	// echo $result->num_row;
 	if ($result->num_rows > 0){
-		echo "<section>";
+		echo "<section class='secao'>";
 		while ($row = $result->fetch_assoc()){
 			
-			echo "<article>";
+			echo "<article class='item-secao'>";
 			echo "<h2>".$row['titulo']."</h2>";
 			// echo "<p>Imagem: ".$row['imagem']."</p>";
 			echo "<img src='".URL()."_imgs/corredor.gif' />";
@@ -20,7 +20,7 @@
 			echo "<p>Descrição: ".$row['descricao']."</p>";
 			echo "<p>Data: ".$row['data_evento']."</p>";
 			echo "<p>Local: ".$row['local_evento']."</p>";
-			echo "<a href='./_pages/inscricao.php?id=".$row['id']."' class='bt-inscricao'>Detalhes</a>";
+			echo "<a href='./_pages/inscricao.php?id=".$row['id']."' class='bt'>Detalhes</a>";
 			echo "</article>";
 			
 		}

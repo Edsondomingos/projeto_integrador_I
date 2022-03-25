@@ -1,25 +1,23 @@
-	
-	<!-- <div id="preload">
-		<img src="<?php //echo URL() ?>_imgs/corredor.gif" />
-	</div>-->
+
 	</main> 
+	</div>
 	<footer>		
-		<figure id="corredor"  >
+		<figure id="corredor-rodape"  >
 			<img src="<?php echo URL()?>_imgs/corredor.gif" width="50px" height="50px">
 			<img src="<?php echo URL()?>_imgs/corredor.gif" width="50px" height="50px">
 			<img src="<?php echo URL()?>_imgs/corredor.gif" width="50px" height="50px">
 		</figure>
 		<!-- <div > -->
-		<section class="contato">
-			<article>
+		<section class="rodape">
+			<article class="">
 				<h3>Sobre</h3>
 				<p>Viemos para contribuir com a organização de eventos esportivos.</p>
 			</article>
-			<article>
+			<article class="">
 				<ul>
 					<h3>Contato</h3>
-					<li>Email</li>
-					<li>whatsapp</li>
+					<li>eventosdecorrida@gmail.com</li>
+					<li>(84)9 9999-9999</li>
 				</ul>
 			</article>
 			
@@ -28,15 +26,28 @@
 			
 		<!-- </div> -->
 	</footer>
-	</div>
+		
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<script type="text/javascript" src="<?php echo URL();?>_js/script.js"></script>
 	<!-- Tela de preload -->
+<<<<<<< HEAD
 	<script type="text/javascript" src="./_js/script.js"></script>
 	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	
+=======
+	<!-- <div id="preload">
+		<img src="<?php echo URL() ?>_imgs/corredor.gif" />
+	</div>
+>>>>>>> 7b5b3b0e2b6c439989b21eb86cf22f6b1f249dab
 	<script type="text/javascript">
 		$(window).on('load', function(){
 			$('#preload').fadeOut(2000).hide();
 		})
-	</script> -->
+		$(window).on('onload', function(){
+			$('body').fadeIn(1000).hide();
+		})
+		
+	</scri pt>-->
 </body>
 </html>

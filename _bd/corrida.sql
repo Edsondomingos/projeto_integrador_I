@@ -1,13 +1,14 @@
 CREATE DATABASE IF NOT EXISTS corrida;
 use corrida;
 CREATE TABLE IF NOT EXISTS atleta(
-    cpf VARCHAR(11) NOT NULL PRIMARY KEY,
+    cpf VARCHAR(14) NOT NULL PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
     data_de_nascimento DATE NOT NULL,
-    telefone VARCHAR(11) NOT NULL,
+    telefone VARCHAR(14) NOT NULL,
     email VARCHAR(100) NOT NULL,
     usuario VARCHAR(30) NOT NULL,
-    senha VARCHAR(30) NOT NULL
+    senha VARCHAR(30) NOT NULL,
+    imagem VARCHAR(20) DEFAULT 'padrao.png' NOT NULL
 
 );
 
@@ -19,7 +20,7 @@ CREATE TABLE IF NOT EXISTS evento(
     descricao VARCHAR(500) NOT NULL,
     titulo VARCHAR(100) NOT NULL,
     valor  DECIMAL(7,2) NOT NULL,
-    criador VARCHAR(11) NOT NULL,
+    criador VARCHAR(14) NOT NULL,
     FOREIGN KEY (criador) REFERENCES atleta(cpf)
 
 );
