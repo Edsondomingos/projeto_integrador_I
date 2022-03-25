@@ -26,15 +26,10 @@
 			
 		<!-- </div> -->
 	</footer>
-		
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 	<script type="text/javascript" src="<?php echo URL();?>_js/script.js"></script>
 	<!-- Tela de preload -->
-
-	<script type="text/javascript" src="./_js/script.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	
 
 	<div id="preload">
 		<img src="<?php echo URL() ?>_imgs/corredor.gif" />
@@ -43,6 +38,7 @@
 	<script type="text/javascript">
 		$(window).on('load', function(){
 			$('#preload').fadeOut(2000).hide();
+			// $('#preload').setTimeout(2000);
 		})
 		$(window).on('onload', function(){
 			$('body').fadeIn(1000).hide();

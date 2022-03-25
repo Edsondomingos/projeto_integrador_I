@@ -32,7 +32,7 @@
 					<input type="radio" name="forma" value="pix" id="pix" required>
 					<label for="pix">Pix</label>					
 				</p>
-				<input type="submit" value="Pagar" class='bt-inscricao bt'>
+				<input type="submit" value="Pagar" class='bt button-inputs'>
 			</form>
 			<?php 
 			

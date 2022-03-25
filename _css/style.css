@@ -79,12 +79,13 @@ a {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-around;
 }
 
 .item-secao {
 	width: 40%;
 	padding: 10px;
+	background-color: #eee;
 }
 
 .item-secao img {
@@ -123,6 +124,11 @@ a {
 	border: 2px solid aqua;
 	background-color: white;
 	color: black;
+}
+
+.button-inputs {
+	border: none;
+	padding: 5px 20px;
 }
 
 #corredor-rodape {
