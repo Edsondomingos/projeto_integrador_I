@@ -7,8 +7,10 @@
 
 	$conn = conectar();
 
+	$cpf = $_SESSION['cpf'];
+
 	// $sql = "SELECT * FROM inscricao WHERE cpf_atleta=$id_evento";
-	$sql = "SELECT * FROM inscricao WHERE cpf_atleta=1 and id_evento=1";//$id_evento";
+	$sql = "SELECT * FROM inscricao WHERE cpf_atleta='$cpf'";//$id_evento";
 
 	$result = $conn->query($sql);
 
@@ -33,7 +35,7 @@
 				<input type="submit" value="Pagar" class='bt-inscricao bt'>
 			</form>
 			<?php 
-			// include 'forma_pagamento.html';
+			
 			echo "</article>";
 		}
 		echo "</section>";
