@@ -14,7 +14,7 @@
 
 		?>
 		<section class="secao">
-		<article class="item-secao">
+		<article class="">
 		<a href="./editar_perfil.php">
 			<button class="bt">Alterar Dados</button></a>
 
@@ -58,8 +58,6 @@
                         $email = $row['email'];
                         $data = $row['data_de_nascimento'];
                         $img = $row['imagem'];
-                 //        echo "<p>Usuário: ".$row['usuario']."</p>";
-      			        // echo "<p>Senha: ".$row['senha']."</p>";
                     }
 
 				};
@@ -85,9 +83,9 @@
 
 				?>
 				<form action="" method="post" enctype="multipart/form-data">
-					<label for="foto-perfil"><img src="../_imgs/<?php echo $img; ?>"></label>
+					<label for="foto-perfil"><img src="../_imgs/<?php echo $img; ?>" style="border-radius: 10px">Click na foto para mudar</label>
 					<input type="file" name="file" id='foto-perfil' style="display: none;" />
-					<input type="submit" name="enviaFoto" value="Mudar">
+					<input type="submit" name="enviaFoto" value="Mudar foto" class="bt">
 				</form>
 				<p></p>
 				<p>Cpf: <?php echo $cpf; ?>.</p>
