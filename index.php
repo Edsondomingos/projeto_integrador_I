@@ -26,6 +26,7 @@
 		}
 		echo "</section>";
 	}
+	
 	include './_template/footer.php';
 
 ?>
