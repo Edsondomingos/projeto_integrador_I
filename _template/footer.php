@@ -1,7 +1,4 @@
-	
-	<!-- <div id="preload">
-		<img src="<?php //echo URL() ?>_imgs/corredor.gif" />
-	</div>-->
+
 	</main> 
 	<footer>		
 		<figure id="corredor"  >
@@ -31,25 +28,19 @@
 	</div>	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-	<!-- Mascara -->
-	<!-- <script type="text/javascript" src="<?php echo URL();?>_js/jQuery-Mask-Plugin-master/dist/jquery-3.2.1.min.js"></script>
-	<script type="text/javascript" src="<?php echo URL();?>_js/jQuery-Mask-Plugin-master/dist/jquery.mask.min.js"></script> -->
-
 	<script type="text/javascript" src="<?php echo URL();?>_js/script.js"></script>
-	<!-- <script>
-		$(document).ready(function() {
-			// console.log('oi');
-			$('#cpf').mask('999.999.999-99');
-		})
-		
-	</script> -->
 	<!-- Tela de preload -->
-	<!-- 
-	
+	<div id="preload">
+		<img src="<?php echo URL() ?>_imgs/corredor.gif" />
+	</div>
 	<script type="text/javascript">
 		$(window).on('load', function(){
 			$('#preload').fadeOut(2000).hide();
 		})
-	</script> -->
+		$(window).on('onload', function(){
+			$('body').fadeIn(1000).hide();
+		})
+		
+	</script>
 </body>
 </html>

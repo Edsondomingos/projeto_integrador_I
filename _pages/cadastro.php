@@ -16,9 +16,8 @@
           <p>
             <label for="cpf"> 
                  <span>CPF</span>    
-<<<<<<< HEAD
                  <input type="text" id="cpf" name="cpf" maxlength="14" placeholder="Digite seu CPF" required/>             
->>>>>>> 65bcc84fba2c5f286340abb6fca28456e8ab7670
+
             </label>
           </p>    
             

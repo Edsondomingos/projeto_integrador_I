@@ -3,7 +3,13 @@
 	padding: 0;
 }
 
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
 body {
+	
 	font-family: Arial;
 }
 
@@ -61,20 +67,17 @@ nav ul li:hover {
 
 main {
 	height: 100%;
-	/* display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around; */
 }
 
 a {
 	text-decoration: none;
-	color: #000;
-	width: 50%;
+	/*color: #000;*/
+	/*width: 50%;*/
 }
 
-a:hover {
+/*a:hover {
 	color: white;
-}
+}*/
 
 section {
 	display: flex;
@@ -168,9 +171,13 @@ footer {
 
 #preload {
 	position: absolute;
-	background: red;
-	width: 100%;
+	background: white;
+	width: 100vw;
 	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: 0;
 }
 
 /*--------- Perfil --------------*/
