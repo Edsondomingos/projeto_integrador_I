@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar Perfil</title>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
     <script type="text/javascript">
@@ -19,8 +11,11 @@
 <body>
 
     <?php
+
+    include "../_template/head.php";
+
     
-    $cpf = $_GET["cpf"];
+    $cpf = $_SESSION["cpf"];
 
 
     include "../_bd/conexao.php";
@@ -57,7 +52,7 @@
     ?>
 
     <h1>Editar Perfil</h1>
-    <form action="../_bd/editar_bd.php?cpf=<?php echo $cpf; ?>" method="post">
+    <form action="../_bd/editar_bd.php?cpf=<?php echo $cpf; ?>" method="post" class="formulario">
     <p>
         <label for="nome">Nome</label>
         <input type="text" name="nome" id="nome" value="<?php echo $nome; ?>"/>
@@ -91,8 +86,8 @@
     </p>
     <input type="hidden" name="cpf" value="<?php echo $cpf; ?>" />
     <p>
-        <input type="submit" value="Editar">
+        <input type="submit" value="Editar" class="bt">
     </p>
     </form>
-</body>
-</html>
+
+     <?php include "../_template/footer.php"; ?>

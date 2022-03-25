@@ -13,16 +13,18 @@
 		};
 
 		?>
-		<section class="bt-perfil">
+		<section class="secao">
+		<article class="item-secao">
 		<a href="./editar_perfil.php">
-			<button class="bt-inscricao">Alterar Dados</button></a>
+			<button class="bt">Alterar Dados</button></a>
 
 		<a href='../_bd/deletar_perfil.php'>
-			<button class="bt-inscricao">Excluir Perfil</button></a>		
+			<button class="bt">Excluir Perfil</button></a>
+		</article>	
 		</section>
 
-		<section class="perfil">
-		<article>
+		<section class="secao">
+		<article class="item-secao">
 		<h2>Dados Cadastrados</h2>
 		
 			<?php

@@ -14,8 +14,7 @@ body {
 }
 
 div {
-	/*height: 100%;*/
-	margin: auto;
+	height: 100vh;
 }
 
 header {
@@ -68,69 +67,107 @@ nav ul li:hover {
 
 main {
 	height: 100%;
-
 }
 
 a {
 	text-decoration: none;
+	/*color: #000;*/
+	/*width: 50%;*/
 }
 
-.secao {
+/*a:hover {
+	color: white;
+}*/
+
+section {
 	display: flex;
 	flex-wrap: wrap;
-	align-items: center;
-	justify-content: center;
-}
-
-.item-secao {
-	width: 40%;
 	padding: 10px;
 }
 
-.item-secao img {
-	width: 100%;
-}
-
-.item-secao p {
-	padding: 5px;
-}
-
-.formulario {
-	width: 250px;
-	margin: auto;
-	padding: 10px;
-	background-color: #eee;
-	font-weight: bold;
-}
-
-.formulario input {
+article {
+	width: 200px;
+	border: 1px solid black;
 	padding: 10px;
 	margin: 10px;
+	text-align: center;
 
 }
 
-.bt {
+article img {
+	width: 100%;
+	height: 200px;
+}
+
+article p {
+	margin: 10px;
+	text-align: left;
+}
+
+.bt-inscricao {
 	background-color: red;
 	padding: 5px;
 	border-radius: 10px;
 	color: white;
 	font-weight: bold;
-	margin: 50px;
+	margin: auto;
 
 }
 
-.bt:hover {
+.bt-inscricao:hover {
 	border: 2px solid aqua;
 	background-color: white;
 	color: black;
 }
 
-#corredor-rodape {
+form {
+	text-align: center;
+	width: 300px;
+	margin: auto;
+	padding: 10px;
+	/*margin: 20px;*/
+	border: 1px solid black;
+}
+
+form input {
+	padding: 5px;
+	margin: 5px;
+}
+
+#corredor {
 	display: flex;
 	justify-content: space-around;
 	margin-top: 30px;
 	border-bottom: 1px dotted black;
 }
+
+/* Rodape */
+footer {
+	height: 100%;
+	/*margin-top: 20px;*/
+	/* text-align: center; */
+}
+
+.contato {
+	padding: 20px;
+	background-image: linear-gradient(to top, rgba(220, 100, 0, 0.7), #fff);
+}
+
+.contato article {
+	border: none;
+	text-align: left;
+	list-style: none;
+}
+
+/*footer figure {
+	display: flex;
+	justify-content: space-around;
+}
+.img-rodape {
+	 width: 50px;
+	 height: 50px;
+	 background: url('corredor.gif');
+}*/
 
 #preload {
 	position: absolute;
@@ -143,20 +180,36 @@ a {
 	top: 0;
 }
 
-footer {
-}
-.rodape {
-	width: auto;
-	height: 100vh;
+/*--------- Perfil --------------*/
 
-	display: flex;
-	flex-wrap: wrap;
-	height: 100px;
-	background-image: linear-gradient(to top, rgba(220, 100, 0, 0.7), #eee);
+.bt-perfil  button {
+	width: 100%;
 }
 
-.rodape article {
-	width: 25%;
-	margin: 10px 15px;
-	/*line-height: 30%;*/
+.perfil {
+	justify-content: space-around;
+	/*width: 100%;*/
 }
+
+.perfil article {
+	border: none;
+	width: 100%;
+}
+
+/*--------- Pagamento --------------*/
+
+.pagamento article {
+	width: 50%;
+	border-radius: 7px;
+}
+
+.bt {
+	width: 100%;
+	padding: 10px;
+}
+
+.pagamento form {
+	width: 80%;
+	border: none;
+}
+

@@ -1,22 +1,23 @@
 
 	</main> 
+	</div>
 	<footer>		
-		<figure id="corredor"  >
+		<figure id="corredor-rodape"  >
 			<img src="<?php echo URL()?>_imgs/corredor.gif" width="50px" height="50px">
 			<img src="<?php echo URL()?>_imgs/corredor.gif" width="50px" height="50px">
 			<img src="<?php echo URL()?>_imgs/corredor.gif" width="50px" height="50px">
 		</figure>
 		<!-- <div > -->
-		<section class="contato">
-			<article>
+		<section class="rodape">
+			<article class="">
 				<h3>Sobre</h3>
 				<p>Viemos para contribuir com a organização de eventos esportivos.</p>
 			</article>
-			<article>
+			<article class="">
 				<ul>
 					<h3>Contato</h3>
-					<li>Email</li>
-					<li>whatsapp</li>
+					<li>eventosdecorrida@gmail.com</li>
+					<li>(84)9 9999-9999</li>
 				</ul>
 			</article>
 			
@@ -25,12 +26,12 @@
 			
 		<!-- </div> -->
 	</footer>
-	</div>	
+		
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 	<script type="text/javascript" src="<?php echo URL();?>_js/script.js"></script>
 	<!-- Tela de preload -->
-	<div id="preload">
+	<!-- <div id="preload">
 		<img src="<?php echo URL() ?>_imgs/corredor.gif" />
 	</div>
 	<script type="text/javascript">
@@ -41,6 +42,6 @@
 			$('body').fadeIn(1000).hide();
 		})
 		
-	</script>
+	</scri pt>-->
 </body>
 </html>

@@ -14,9 +14,9 @@
 
 	if ($result->num_rows > 0){
 		echo "<h1>Pagamento</h1>";
-		echo "<section class='pagamento'>";
+		echo "<section class='secao'>";
 		while ($row = $result->fetch_assoc()){
-			echo "<article>";
+			echo "<article class='item-secao'>";
 			echo "<h2>Evento ".$row['id_evento']."<h2>";
 			echo "<p>Cpf:  ".$row['cpf_atleta']."<p>";
 			echo "<p>Inscricao: ".$row['numeroinscricao']."</p>";

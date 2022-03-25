@@ -10,13 +10,13 @@
    
       <h1>Cadastre-se</h1>
 
-        <form  method="post" action="../_bd/cadastro_bd.php">
+        <form  method="post" action="../_bd/cadastro_bd.php" class="formulario">
           
           
           <p>
             <label for="cpf"> 
                  <span>CPF</span>    
-                 <input type="text" id="cpf" name="cpf" maxlength="14" placeholder="Digite seu CPF" required/>             
+                 <input type="text" id="cpf" name="cpf" maxlength="14" placeholder="Digite seu CPF" required autofocus />             
 
             </label>
           </p>    
@@ -71,7 +71,7 @@
             
 
           <p>
-            <input type="submit" value="Cadastrar" id="button">
+            <input type="submit" value="Cadastrar" id="button" class="bt">
           </p>  
         </form>
 </body>
