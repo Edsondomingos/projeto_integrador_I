@@ -1,4 +1,7 @@
-<?php 
+<?php
+	session_start();
+	if(isset($_SESSION['usuario']) && isset($_SESSION['cpf'])) {
+        session_abort();
 	include '../_template/head.php';
 
 	// $id_evento = $_GET['id'];
@@ -42,4 +45,11 @@
 	}
 
 	include '../_template/footer.php';
+	} else {
+		function URL(){
+			$_SERVER['REQUEST_URI'] = '/projeto_integrador_i/';
+			return $_SERVER['REQUEST_URI'];
+		}
+		header('Location: '.URL());
+	}
 ?>
