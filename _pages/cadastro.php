@@ -1,4 +1,11 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+<script type="text/javascript">
 
+  $("#cpf").mask("000.000.000-00");
+  $("#telefone").mask("(00)00000-0000");
+
+</script>
     <?php include "../_template/head.php"; ?>
    
       <h1>Cadastre-se</h1>
@@ -9,7 +16,7 @@
           <p>
             <label for="cpf"> 
                  <span>CPF</span>    
-                 <input type="text" id="cpf" name="cpf" placeholder="Digite seu CPF" required/>             
+                 <input type="text" id="cpf" name="cpf" maxlength="14" placeholder="Digite seu CPF" required/>             
             </label>
           </p>    
             
@@ -33,7 +40,7 @@
           <p>  
             <label for="telefone">
                 <span>Telefone</span>
-                <input type="text" id="telefone" name="telefone" placeholder="Digite seu Telefone" required/>
+                <input type="text" id="telefone" name="telefone" maxlength="14" placeholder="Digite seu Telefone" required/>
             </label>
           </p>    
             

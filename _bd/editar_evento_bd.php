@@ -16,7 +16,7 @@ $conn = conectar();
 $sql = " UPDATE evento SET titulo='".$titulo."', local_evento='".$local_evento."' , data_evento='".$data_evento."', imagem='".$imagem."', descricao='".$descricao."', valor='".$valor."'  WHERE id=$id ";
 
 if($conn->query($sql)){
-    header ('location: ../_pages/criar_evento.php');
+    header ('location: ../index.php');
     echo "Projeto cadastrado com sucesso!";
 }else{
     echo "Ocorreu um erro";

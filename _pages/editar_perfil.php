@@ -55,7 +55,7 @@
     </p>
     <p>
         <label for="cpf">CPF</label>
-        <input type="text" name="cpf" id="cpf" value="<?php echo $cpf; ?>"/>
+        <input type="text" name="cpf" id="cpf" maxlength="14" value="<?php echo $cpf; ?>"/>
     </p>
     <p>
         <label for="data_de_nascimento">Data de Nasciemto</label>
