@@ -90,7 +90,7 @@
 				<p></p>
 				<p>Cpf: <?php echo $cpf; ?>.</p>
       			<p>Nome: <?php echo $nome; ?></p>
-      			<p>Nome: <?php echo $user; ?></p>
+      			<p>Usuário: <?php echo $user; ?></p>
       			<p>Data de Nascimento: <?php echo $data; ?></p>
                 <p>Telefone: <?php echo $telefone; ?></p>
                 <p>E-Mail: <?php echo $email; ?></p>
