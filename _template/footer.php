@@ -31,23 +31,6 @@
 
 	<script type="text/javascript" src="<?php echo URL();?>_js/script.js"></script>
 	<!-- Tela de preload -->
-<<<<<<< HEAD
-	<script type="text/javascript" src="./_js/script.js"></script>
-	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	
-=======
-	<!-- <div id="preload">
-		<img src="<?php echo URL() ?>_imgs/corredor.gif" />
-	</div>
->>>>>>> 7b5b3b0e2b6c439989b21eb86cf22f6b1f249dab
-	<script type="text/javascript">
-		$(window).on('load', function(){
-			$('#preload').fadeOut(2000).hide();
-		})
-		$(window).on('onload', function(){
-			$('body').fadeIn(1000).hide();
-		})
-		
-	</scri pt>-->
 </body>
 </html>
