@@ -57,7 +57,7 @@
     ?>
 
     <h1>Editar Perfil</h1>
-    <form action="../_bd/editar_bd.php?id=<?php echo $cpf; ?>" method="post">
+    <form action="../_bd/editar_bd.php?cpf=<?php echo $cpf; ?>" method="post">
     <p>
         <label for="nome">Nome</label>
         <input type="text" name="nome" id="nome" value="<?php echo $nome; ?>"/>
@@ -72,7 +72,7 @@
     </p>
     <p>
         <label for="telefone">Telefone</label>
-        <input type="number" name="telefone" id="telefone" maxlength="14" value="<?php echo $telefone; ?>"/>
+        <input type="text" name="telefone" id="telefone" maxlength="14" value="<?php echo $telefone; ?>"/>
     </p>
 
     <p>
