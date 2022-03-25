@@ -9,7 +9,7 @@
           <p>
             <label for="cpf"> 
                  <span>CPF</span>    
-                 <input type="number" id="cpf" name="cpf" placeholder="Apenas números" required/>             
+                 <input type="number" id="cpf" name="cpf" placeholder="Apenas números" required autofocus />             
             </label>
           </p>    
             

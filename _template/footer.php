@@ -30,14 +30,19 @@
 	</footer>
 	</div>	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<!-- Mascara -->
+	<!-- <script type="text/javascript" src="<?php echo URL();?>_js/jQuery-Mask-Plugin-master/dist/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="<?php echo URL();?>_js/jQuery-Mask-Plugin-master/dist/jquery.mask.min.js"></script> -->
+
 	<script type="text/javascript" src="<?php echo URL();?>_js/script.js"></script>
-	<script>
-		$(document).ready(function () {
+	<!-- <script>
+		$(document).ready(function() {
 			// console.log('oi');
-			// $("#cpf").mask("999.999.999-99");
+			$('#cpf').mask('999.999.999-99');
 		})
 		
-	</script>
+	</script> -->
 	<!-- Tela de preload -->
 	<!-- 
 	
