@@ -31,7 +31,7 @@
 	<!-- Tela de preload -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-	<div id="preload">
+	<!-- <div id="preload">
 		<img src="<?php echo URL() ?>_imgs/corredor.gif" />
 	</div>
 
@@ -44,6 +44,6 @@
 			$('body').fadeIn(1000).hide();
 		})
 		
-	</script>
+	</script> -->
 </body>
 </html>
