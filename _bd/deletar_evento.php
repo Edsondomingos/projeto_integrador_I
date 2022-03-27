@@ -1,4 +1,6 @@
 <?php
+include "../_template/head.php";
+if ( isset($_SESSION['usuario']) and isset($_SESSION['cpf']) ){
 
 $id = $_GET["id"];
 
@@ -16,5 +18,9 @@ if($conn->query($sql)){
 }
 
 desconectar($conn);
+
+} else {
+  header("Location: ".URL());
+}
 
 ?>

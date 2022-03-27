@@ -1,21 +1,28 @@
 <?php
 
-$cpf = $_GET['cpf'];
+include "../_template/head.php";
+if ( isset($_SESSION['usuario']) and isset($_SESSION['cpf']) ){
 
-    include "conexao.php";
+// $cpf = $_GET['cpf'];
 
-    $conn = conectar();
+//     include "conexao.php";
 
-    $sql = "DELETE FROM atleta WHERE cpf=".$cpf;
+//     $conn = conectar();
 
-    if($conn->query($sql)){
-        echo "Perfil Deletado com sucesso!";
-        //header ('location: index.php');
-    }else{
-        echo "Deu erro!";
-        echo $conn->error;
-    }
+//     $sql = "DELETE FROM atleta WHERE cpf=".$cpf;
 
-    desconectar($conn);
+//     if($conn->query($sql)){
+//         echo "Perfil Deletado com sucesso!";
+//         //header ('location: index.php');
+//     }else{
+//         echo "Deu erro!";
+//         echo $conn->error;
+//     }
+
+//     desconectar($conn);
+
+} else {
+  header("Location: ".URL());
+}
 
 ?>

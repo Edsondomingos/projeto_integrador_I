@@ -1,4 +1,7 @@
 <?php
+include "../_template/head.php";
+if ( isset($_SESSION['usuario']) and isset($_SESSION['cpf']) ){
+
     session_start();
 
     $img = $_GET['imagem'];
@@ -35,5 +38,7 @@
 
     desconectar($conn);
 
-
+} else {
+  header("Location: ".URL());
+}
 ?>
