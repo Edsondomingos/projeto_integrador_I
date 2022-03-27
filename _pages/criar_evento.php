@@ -1,4 +1,8 @@
-    <?php include '../_template/head.php'; ?>
+    <?php include '../_template/head.php'; 
+    if ( isset($_SESSION['usuario']) and isset($_SESSION['cpf']) ){
+
+
+    ?>
 
     <form action="../_bd/criar_evento_bd.php" method="post" class="formulario" enctype="multipart/form-data">
 
@@ -35,4 +39,9 @@
     <p><input type="submit" name="enviaFoto" value="Cadastrar" class="bt button-inputs"></p>
 
     </form>
-    <?php include '../_template/footer.php'; ?>
+    <?php include '../_template/footer.php'; 
+        } else {
+          header("Location: ".URL());
+        }
+
+    ?>

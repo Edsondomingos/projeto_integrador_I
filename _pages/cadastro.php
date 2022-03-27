@@ -1,3 +1,5 @@
+
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
 <script type="text/javascript">
@@ -6,7 +8,13 @@
   $("#telefone").mask("(00)00000-0000");
 
 </script>
-    <?php include "../_template/head.php"; ?>
+    <?php include "../_template/head.php"; 
+    if ( isset($_SESSION['usuario']) and isset($_SESSION['cpf']) ){
+      header("Location: ".URL()."index.php");
+    } else {
+
+
+    ?>
    
       <h1>Cadastre-se</h1>
 
@@ -74,6 +82,9 @@
             <input type="submit" value="Cadastrar" id="button" class="bt button-inputs">
           </p>  
         </form>
-</body>
-  </html>
-    <?php include "../_template/footer.php"; ?>
+
+    <?php include "../_template/footer.php"; 
+      
+      }
+
+    ?>

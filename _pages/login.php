@@ -1,5 +1,10 @@
 
-  <?php  include "../_template/head.php"; ?>
+  <?php  include "../_template/head.php"; 
+
+  if ( isset($_SESSION['usuario']) and isset($_SESSION['cpf']) ){
+      header("Location: ".URL()."index.php");
+    } else {
+  ?>
 
   <h1>Login</h1>
 
@@ -21,4 +26,6 @@
      
   </form>
 
-  <?php  include "../_template/footer.php"; ?>
+  <?php  include "../_template/footer.php"; 
+    }
+  ?>

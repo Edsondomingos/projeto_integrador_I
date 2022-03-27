@@ -2,7 +2,10 @@
 	// session_start();
 	// if(isset($_SESSION['nome']) and isset($_SESSION['senha'])){
 ?>
-	<?php  include "../_template/head.php"; ?>
+	<?php  include "../_template/head.php"; 
+
+	if ( isset($_SESSION['usuario']) and isset($_SESSION['cpf']) ){
+	?>
 	<a href="index.php">
 	</a>
 	<h1>Perfil</h1>
@@ -98,7 +101,7 @@
 	<script type="text/javascript" src="script.js"></script>
 	<?php  include "../_template/footer.php"; ?>
 <?php
-	// }else{
-	// 	header('Location: index.php');
-	// };
+	} else {
+      header("Location: ".URL());
+    }
 ?>

@@ -4,6 +4,7 @@
 		$_SERVER['REQUEST_URI'] = '/projeto_integrador_i/';
 		return $_SERVER['REQUEST_URI'];
 	}
+	
 ?>
 
 <!DOCTYPE html>

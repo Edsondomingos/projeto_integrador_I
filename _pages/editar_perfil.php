@@ -7,14 +7,12 @@
 
     </script>
 
-</head>
-<body>
-
     <?php
 
     include "../_template/head.php";
 
-    
+    if ( isset($_SESSION['usuario']) and isset($_SESSION['cpf']) ){
+
     $cpf_sessao = $_SESSION["cpf"];
 
 
@@ -90,4 +88,10 @@
     </p>
     </form>
 
-     <?php include "../_template/footer.php"; ?>
+    <?php include "../_template/footer.php"; 
+
+        } else {
+          header("Location: ".URL());
+        }
+
+    ?>
