@@ -6,7 +6,7 @@
 
         $id = $_GET["id"];
 
-        include "conexao.php";
+        include "../_bd/conexao.php";
 
         $conn = conectar();
 

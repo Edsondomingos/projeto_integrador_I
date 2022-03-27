@@ -1,6 +1,7 @@
 <?php
 session_start();
-// if(isset($_SESSION['usuario']) and isset($_SESSION['senha'])){
+include "../_template/head.php";
+if(isset($_SESSION['usuario']) and isset($_SESSION['senha'])){
     $cpf = $_POST["cpf"];
     $nome = $_POST["nome"];
     $nascimento = $_POST["nascimento"];
@@ -21,7 +22,7 @@ session_start();
 
     desconectar($conn);
 
-// }else{
-//     header('Location: index.php');
-// };
+}else{
+    header('Location: '.URL().'index.php');
+};
 ?>
