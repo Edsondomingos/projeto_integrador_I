@@ -1,3 +1,5 @@
+@import url ('https://fonts.googleapis.com/css2? família=Merriweather:wght@300&display=swap');
+
 * {
 	margin: 0;
 	padding: 0;
@@ -87,11 +89,12 @@ a {
 	height: 350px;
 	padding: 10px;
 	background-color: #eee;
+	margin-top: 5px;
 }
 
 .item-secao img {
 	width: 100%;
-	height: 170px;
+	height: auto;
 }
 
 .item-secao p {
@@ -154,20 +157,38 @@ a {
 }
 
 footer {
+	margin-top: 100%;
+	color: #fff;
 }
 
 .rodape {
 	width: auto;
-	height: 100vh;
+	height: auto;
+	font-size: 85%;
+	/*font-family: 'Merriweather', serif ,Helverita;*/
+	/*font-weight: 600;*/
 
 	display: flex;
 	flex-wrap: wrap;
+
+	/*flex-basis: 0;
+	flex-shrink: 2;
+	flex-grow: 2;*/
+
 	height: 100px;
-	background-image: linear-gradient(to top, rgba(220, 100, 0, 0.7), #eee);
+	/*background-image: linear-gradient(to top, rgba(220, 100, 0, 0.7), #eee);*/
+	background-color: #555;
+	
 }
 
 .rodape article {
 	width: 25%;
-	margin: 10px 15px;
+	margin: 10px 25px;
 	/*line-height: 30%;*/
+}
+
+.rodape img {
+	width: 30px;
+	height: 30px;
+	margin: 0 5px;
 }

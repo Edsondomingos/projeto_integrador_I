@@ -1,14 +1,11 @@
 <?php
 	session_start();
-	// if (isset($_SESSION['usuario'])){
+	
 		$id_evento = $_GET['id'];
 
 		include "conexao.php";
 
 		$conn = conectar();
-
-		// $verificar = "(SELECT cpf FROM atleta WHERE usuario='".$_SESSION['usuario']."' and senha='".$_SESSION['senha']."')";
-		// echo $conn->query($verificar);
 
 		$sql = "DELETE FROM inscricao WHERE cpf_atleta='".$_SESSION['cpf']."' and id_evento='".$id_evento."';";
 
@@ -19,9 +16,6 @@
 		}
 
 		desconectar($conn);
-	// } else {
-	// 	header('Location: ../index.php')
-	// }
 	
 
 ?>

@@ -25,7 +25,7 @@
             echo "<article class='item-secao'>";
             while ($row = $result->fetch_assoc()){
                 
-                // echo "<article class='item-secao'>";
+                
                 echo $row['imagem'];
                 $img = $row['imagem'];
                 echo "<p>Titulo: ".$row['titulo']."</p>";
@@ -35,15 +35,14 @@
                 echo "<p>Descrição: ".$row['descricao']."</p>";
                 echo "<p>Valor: ".$row['valor']."</p>";
                 $valor = $row['valor'];
-                // echo "</article>";
+                
                 
             }
-            // echo "</section>";
+            
         }
         
     ?>
     
-    <!-- <p><input type="hidden" name="id" value="<?php echo $id; ?>"></p> -->
     <?php 
         $verificar = "SELECT cpf_atleta FROM inscricao WHERE id_evento='$id';";
         if ($conn->query($verificar)->num_rows <= 0){

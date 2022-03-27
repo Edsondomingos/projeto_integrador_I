@@ -1,7 +1,7 @@
 <?php 
 include "../_template/head.php";
 if ( isset($_SESSION['usuario']) and isset($_SESSION['cpf']) ){
-	// $id_evento = $_GET['id'];
+	
 
 	$forma = $_POST['forma'];
 	$inscricao = $_POST['inscricao'];

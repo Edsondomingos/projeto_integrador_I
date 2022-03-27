@@ -4,16 +4,13 @@
         session_abort();
 	include '../_template/head.php';
 
-	// $id_evento = $_GET['id'];
-
 	include '../_bd/conexao.php';
 
 	$conn = conectar();
 
 	$cpf = $_SESSION['cpf'];
 
-	// $sql = "SELECT * FROM inscricao WHERE cpf_atleta=$id_evento";
-	$sql = "SELECT * FROM inscricao WHERE cpf_atleta='$cpf'";//$id_evento";
+	$sql = "SELECT * FROM inscricao WHERE cpf_atleta='$cpf'";
 
 	$result = $conn->query($sql);
 

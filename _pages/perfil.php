@@ -1,7 +1,4 @@
-<?php 
-	// session_start();
-	// if(isset($_SESSION['nome']) and isset($_SESSION['senha'])){
-?>
+
 	<?php  include "../_template/head.php"; 
 
 	if ( isset($_SESSION['usuario']) and isset($_SESSION['cpf']) ){
@@ -82,9 +79,9 @@
 
 			?>
 			<form id="form" action="" method="post" enctype="multipart/form-data">
-				<label for="fotoPerfil"><img src="../_imgs/<?php echo $img; ?>" style="border-radius: 10px">Click na foto para mudar</label>
+				<label for="fotoPerfil"><img src="../_imgs/<?php echo $img; ?>" style="border-radius: 10px">Click e escolha uma foto de perfil</label>
 				<input type="file" name="file" id="fotoPerfil" style="display: none;" />
-				<input type="submit" name="enviaFoto" value="Mudar foto" class="bt button-inputs" id="mdfoto">
+				<input type="submit" name="enviaFoto" value="Confirmar foto" class="bt button-inputs" id="mdfoto">
 				<br/><br/><a href="editar_perfil.php" class="bt">Alterar Dados
 		          <!-- <button></button> -->
 				</a>

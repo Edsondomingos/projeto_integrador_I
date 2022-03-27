@@ -4,6 +4,8 @@
 
     ?>
 
+    <h1>Criar evento</h1>
+
     <form action="../_bd/criar_evento_bd.php" method="post" class="formulario" enctype="multipart/form-data">
 
     <p>

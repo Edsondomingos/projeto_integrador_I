@@ -14,17 +14,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Cadastro de corridas</title>
 	<link rel="stylesheet" type="text/css" href="<?php echo URL() ?>_css/style.css">
-	<style type="text/css">
-		
-	</style>
 </head>
 <body>
 	<div>
 	<header>
-		<h1>Eventos de Corrida</h1>
+		<h1 title="Site de ">Eventos de Corrida</h1>
 	</header>
 
-	<nav>
+	<nav role="menubar">
 		<ul>
 		
 		<?php 
@@ -44,5 +41,5 @@
 			
 		</ul>
 	</nav>
-<main>
+<main role="main">
 

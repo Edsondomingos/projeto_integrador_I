@@ -17,7 +17,6 @@
         }
         header('Location: ../index.php?bv=Seja+bem+vindo');
         
-        // $_SESSION['senha'] = $_POST["senha"];//Tirar senha da sessão()salvar variaveis no while)
     }else{
         header('Location: ../_pages/login.php?autenticar=usuario+ou+senha+incorreta,+tente+novamente.');
     };
