@@ -71,7 +71,7 @@
 					header('Location: ../_pages/perfil.php');
 				} else {
 					$novoNome = $_SESSION['cpf'].'.png';
-					move_uploaded_file($foto['tmp_name'], '../_imgs/'.$novoNome);
+					move_uploaded_file($foto['tmp_name'], '../_imgs/img_perfil/'.$novoNome);
 					$salvaImg = "UPDATE atleta SET imagem='$novoNome' WHERE cpf='".$_SESSION['cpf']."'";
 					$conn->query($salvaImg);
 				}

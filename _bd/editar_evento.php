@@ -37,40 +37,40 @@
     ?>
 
     <h1>Editar Evento</h1>
-    <form method="post" action="../_bd/editar_evento_bd.php?id=<?php echo $id; ?>" class="formulario">
+    <form method="post" action="../_bd/editar_evento_bd.php?id=<?php echo $id; ?>" class="formulario" enctype="multipart/form-data">
 
     <p>
         <label for="titulo" >Titulo do Evento:</label>
-        <input type="text" name="titulo" id="titulo" value="<?php echo $titulo; ?>"/>
+        <input type="text" name="titulo" id="titulo" value="<?php echo $titulo; ?>" required/>
     </p>
 
     <p>
         <label for="descricao">Descrição do Evento:</label>
-        <input type="text" name="descricao" id="descricao" value="<?php echo $descricao; ?>"/>
+        <input type="text" name="descricao" id="descricao" value="<?php echo $descricao; ?>" required/>
     </p>
 
     <p>
         <label for="local_evento" >Local do Evento</label>
-        <input type="text" name="local_evento" id="local_evento" value="<?php echo $local_evento; ?>"/>
+        <input type="text" name="local_evento" id="local_evento" value="<?php echo $local_evento; ?>" required/>
     </p>
 
     <p>
         <label for="imagem" >Imagem:</label>
-        <input type="file" name="imagem" id="imagem" value="<?php echo $imagem; ?>"/>
+        <input type="file" name="imagem" id="imagem" value="<?php echo $imagem; ?>" required/>
     </p>
 
     <p>
         <label for="data_evento" >Data do Evento</label>
-        <input type="date" name="data_evento" id="data_evento" value="<?php echo $data_evento; ?>"/>
+        <input type="date" name="data_evento" id="data_evento" value="<?php echo $data_evento; ?>" required/>
     </p>
 
     <p>
         <label for="valor" >Valor da Inscrição</label>
-        <input type="number" name="valor" id="valor" value="<?php echo $valor; ?>"/>
+        <input type="number" name="valor" id="valor" value="<?php echo $valor; ?>" required/>
     </p>
     <input type="hidden" name="id" value="<?php echo $id; ?>" />
     <p>
-        <input type="submit" value="Editar" class="bt">
+        <input type="submit" value="Editar" class="bt button-inputs">
     </p>
     </form>
 

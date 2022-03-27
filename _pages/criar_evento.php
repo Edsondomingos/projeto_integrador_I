@@ -1,6 +1,6 @@
     <?php include '../_template/head.php'; ?>
 
-    <form action="../_bd/criar_evento_bd.php" method="post" class="formulario">
+    <form action="../_bd/criar_evento_bd.php" method="post" class="formulario" enctype="multipart/form-data">
 
     <p>
         <label for="titulo" >Titulo do Evento:</label>
@@ -19,7 +19,7 @@
 
     <p>
         <label for="imagem" >Imagem:</label>
-        <input type="file" name="imagem" id="imagem">
+        <input type="file" name="imagem" id="imagem" required>
     </p>
 
     <p>
@@ -32,7 +32,7 @@
         <input type="number" name="valor" id="valor" required>
     </p>
 
-    <p><input type="submit" value="Cadastrar" class="bt"></p>
+    <p><input type="submit" name="enviaFoto" value="Cadastrar" class="bt button-inputs"></p>
 
     </form>
     <?php include '../_template/footer.php'; ?>

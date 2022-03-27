@@ -17,7 +17,7 @@
       <p> <label for="senha">Senha:</label><br/>
       <input type="password" id="senha" name="senha" /></p>
           
-      <input type="submit" value="Autenticar" name="autenticar" class="bt">       
+      <input type="submit" value="Autenticar" name="autenticar" class="bt button-inputs">       
      
   </form>
 

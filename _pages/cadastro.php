@@ -71,7 +71,7 @@
             
 
           <p>
-            <input type="submit" value="Cadastrar" id="button" class="bt">
+            <input type="submit" value="Cadastrar" id="button" class="bt button-inputs">
           </p>  
         </form>
 </body>
