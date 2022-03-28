@@ -14,6 +14,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Cadastro de corridas</title>
 	<link rel="stylesheet" type="text/css" href="<?php echo URL() ?>_css/style.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo URL() ?>_css/stylemobile.css">
 </head>
 <body>
 	<div>

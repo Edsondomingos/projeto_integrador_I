@@ -45,8 +45,8 @@ CREATE TABLE IF NOT EXISTS pagamento(
     data_hora_pagamento DATETIME NOT NULL,
     titulo VARCHAR(100) NOT NULL,
     valor DECIMAL(7,2) NOT NULL,
-    cpf_atleta VARCHAR(14) NOT NULL,
-    id_evento INT NOT NULL,
+    pagador VARCHAR(14) NOT NULL,
+    num_evento INT NOT NULL,
     numeroinscricao_inscricao int NOT NULL,
     FOREIGN KEY (numeroinscricao_inscricao) REFERENCES inscricao(numeroinscricao)
     

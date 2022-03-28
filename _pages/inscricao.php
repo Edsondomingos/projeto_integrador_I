@@ -26,7 +26,7 @@
             while ($row = $result->fetch_assoc()){
                 
                 
-                echo $row['imagem'];
+                echo "<img src='../_imgs/img_evento/".$row['imagem']."' />";
                 $img = $row['imagem'];
                 echo "<p>Titulo: ".$row['titulo']."</p>";
                 $titulo = $row['titulo'];

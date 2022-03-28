@@ -31,14 +31,7 @@
 			$cpf_atleta = $row['cpf_atleta'];
 			?>
 			<form action="../_bd/forma_pagamento_bd.php" method="post">
-				<p>
-					<input type="radio" name="forma" value="boleto" id="boleto" required>
-					<label for="boleto">Boleto</label>
-				</p>
-				<p>
-					<input type="radio" name="forma" value="pix" id="pix" required>
-					<label for="pix">Pix</label>					
-				</p>
+				
 				<input type="hidden" name="inscricao" value="<?php echo $nincricao; ?>">
 				<input type="hidden" name="titulo" value="<?php echo $titulo; ?>">
 				<input type="hidden" name="valor" value="<?php echo $valor; ?>">
@@ -46,10 +39,21 @@
 				<input type="hidden" name="id_evento" value="<?php echo $id_evento; ?>">
 
 				<?php
-				$verificar = "SELECT * FROM pagamento WHERE id_evento='$id_evento' and cpf_atleta='".$_SESSION['cpf']."';";
+				$verificar = "SELECT * FROM pagamento WHERE num_evento='$id_evento' and pagador='".$_SESSION['cpf']."';";
 				if ($conn->query($verificar)->num_rows > 0){
 					echo '<button class="bt button-inputs" style="background: green">PAGO<button>';				
 				} else {
+				?> 
+					<p>
+					<input type="radio" name="forma" value="boleto" id="boleto" required>
+					<label for="boleto">Boleto</label>
+					</p>
+					<p>
+						<input type="radio" name="forma" value="pix" id="pix" required>
+						<label for="pix">Pix</label>					
+					</p>
+
+				<?php
 					echo '<input type="submit" value="Pagar" class="bt button-inputs">';
 					
 				}

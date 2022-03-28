@@ -8,6 +8,10 @@ include "../_bd/conexao.php";
 
 $conn = conectar();
 
+$sqlPag = "DELETE FROM pagamento WHERE cpf_atleta='".$_SESSION['cpf']."' and id_evento='".$id."';";
+$conn->query($sqlPag);
+$sqlInscr = "DELETE FROM inscricao WHERE cpf_atleta='".$_SESSION['cpf']."' and id_evento='".$id."';";
+$conn->query($sqlInscr);
 $sql = "DELETE FROM evento WHERE id=".$id;
 
 if($conn->query($sql)){

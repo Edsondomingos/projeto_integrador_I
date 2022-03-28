@@ -79,7 +79,7 @@
 
 			?>
 			<form id="form" action="" method="post" enctype="multipart/form-data">
-				<label for="fotoPerfil"><img src="../_imgs/<?php echo $img; ?>" style="border-radius: 10px">Click e escolha uma foto de perfil</label>
+				<label for="fotoPerfil"><img src="../_imgs/img_perfil/<?php echo $img; ?>" style="border-radius: 10px">Click e escolha uma foto de perfil</label>
 				<input type="file" name="file" id="fotoPerfil" style="display: none;" />
 				<input type="submit" name="enviaFoto" value="Confirmar foto" class="bt button-inputs" id="mdfoto">
 				<br/><br/><a href="editar_perfil.php" class="bt">Alterar Dados

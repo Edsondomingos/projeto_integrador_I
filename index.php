@@ -18,7 +18,7 @@
 			echo "<p title='Descricao: ".$row['descricao']."'>Descrição: ".$row['descricao']."</p>";
 			echo "<p title='Data: ".$row['data_evento']."'>Data: ".$row['data_evento']."</p>";
 			echo "<p title='Local: ".$row['local_evento']."'>Local: ".$row['local_evento']."</p>";
-			echo "<br/><br/><a href='./_pages/inscricao.php?id=".$row['id']."' class='bt button-inputs'  title='Link que te leva a pagina de detalhes do evento clicado'>Detalhes do evento</a>";
+			echo "<br/><br/><a href='./_pages/inscricao.php?id=".$row['id']."' class='bt button-inputs'  title='Link que para a pagina de detalhes do evento clicado'>Detalhes do evento</a>";
 			echo "</article>";
 			
 		}

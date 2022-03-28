@@ -2,6 +2,8 @@
 session_start();
 include "../_template/head.php";
 if(isset($_SESSION['usuario']) and isset($_SESSION['senha'])){
+    header('Location: '.URL().'index.php');
+} else {
     $cpf = $_POST["cpf"];
     $nome = $_POST["nome"];
     $nascimento = $_POST["nascimento"];
@@ -22,7 +24,6 @@ if(isset($_SESSION['usuario']) and isset($_SESSION['senha'])){
 
     desconectar($conn);
 
-}else{
-    header('Location: '.URL().'index.php');
-};
+}
+
 ?>
