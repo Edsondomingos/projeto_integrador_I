@@ -44,6 +44,11 @@
     ?>
     
     <?php 
+        $pdf = "SELECT resultado FROM inscricao WHERE id_evento='".$id."' and cpf_atleta='".$_SESSION['cpf']."'";
+        $nomePdf = $conn->query($pdf)->fetch_assoc()['resultado'];
+        if ($conn->query($pdf) != 'vazio'){
+            echo "<a href='../_imgs/pdfs/".$nomePdf."pdf' class='bt button-inputs'>resultado</a>";
+        }
         $verificar = "SELECT cpf_atleta FROM inscricao WHERE id_evento='$id';";
         if ($conn->query($verificar)->num_rows <= 0){
             echo '<form action="../_bd/inscricao.php" método="post">';
@@ -54,10 +59,14 @@
             echo '<p><input type="submit" value="Inscrever-se" inscrição class="bt button-inputs"></p>';
             
         } else {
+            if(isset($_GET['nao'])){
+               echo "<p style='font-size:20px;background:#2f2'>".$_GET['nao']."</p>" ;
+            }
+            
             echo '<form action="../_bd/cancelar_inscricao.php" método="post">';
             echo '<p><input type="hidden" name="id" value="'.$id.'"></p>';
             echo '<p><input type="submit" value="Cancelar inscrição" class="bt button-inputs"></p>';
-            echo '<br><a href="../_pages/pagamento.php?id='.$id.'" class=" bt">Pagamento</a></br>'; 
+            echo '<br><a href="../_pages/pagamento.php?id='.$id.'" class="button-inputs bt">Pagamento</a></br>'; 
             
             
         }
@@ -65,6 +74,7 @@
         $verificriador = "SELECT criador FROM evento WHERE criador='".$_SESSION['cpf']."';";
         
         if ($conn->query($verificriador)->num_rows > 0){
+            echo '<br><a href="../_pages/resultado.php?id='.$id.'" class=" bt">Adicionar Resultado</a></br>';
            echo '<br><a href="../_pages/editar_evento.php?id='.$id.'" class=" bt">Editar Evento</a></br>';
            echo '<br><a href="../_bd/deletar_evento.php?id='.$id.'" class=" bt">Deletar evento</a></br>'; 
            

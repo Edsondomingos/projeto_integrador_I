@@ -84,7 +84,7 @@
     </p>
     <input type="hidden" name="cpf_atual" value="<?php echo $cpf; ?>" />
     <p>
-        <input type="submit" value="Editar" class="bt">
+        <input type="submit" value="Editar" class="bt button-inputs">
     </p>
     </form>
 

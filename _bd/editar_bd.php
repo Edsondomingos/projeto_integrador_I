@@ -18,7 +18,7 @@ $sql = "UPDATE atleta SET nome='".$nome."', telefone='".$telefone."', data_de_na
 echo $sql;
 if($conn->query($sql)){
     $_SESSION["cpf"] = $cpf;
-    header ('location: ../_pages/perfil.php');
+    header ('location: ../_pages/perfil.php?c=Alterações+salvas');
 }else{
     echo "Ocorreu algum erro";
     echo $conn->error;

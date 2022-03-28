@@ -7,7 +7,9 @@
 	$sql = "SELECT * FROM evento";
 
 	$result = $conn->query($sql);
-	
+	if(isset($_GET['bv'])){
+		echo "<p style='text-align:center;background-color:aqua;height: 30px' id='msg'>".$_GET['bv']."</p>";
+	};
 	if ($result->num_rows > 0){
 		echo "<section class='secao'>";
 		while ($row = $result->fetch_assoc()){

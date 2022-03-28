@@ -15,24 +15,24 @@
 			</article>
 			<article class="">
 				<ul>
-					<h3>Contato</h3>
-					<li>eventosdecorrida@gmail.com</li>
+					<h3>Contato</h3><br/>
+					<li>eventosdecorrida@gmail.com</li><br/>
 					<li>(84)9 9999-9999</li>
 				</ul>
 			</article>
 			<article>
-				<h3>Siga-nos</h3>
+				<h3>Siga-nos</h3><br/>
 				<img src="<?php echo URL()."_imgs/insta.png" ?>" alt="imagem do link para o instagram" title="imagem do link para nosso instagram">
 				<img src="<?php echo URL()."_imgs/linkedin.png" ?>" alt="imagem do link para o linkedin" title="imagem do link para nosso linkedin">
 			</article>
 			
 		</section>
-		<p style="/*background:rgba(220, 100, 0, 0.7)*/;background: #555; text-align:center;">&copy; Alunos do IFCang</p>
+		<p style="background: #555; text-align:center;">&copy; Alunos do IFCang</p>
 			
-		<!-- </div> -->
+		
 	</footer>
 
-	<script type="text/javascript" src="<?php echo URL();?>_js/script.js"></script>
+	<script type="text/javascript" src="<?php echo URL();?>_js/js.js"></script>
 	<!-- Tela de preload -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 

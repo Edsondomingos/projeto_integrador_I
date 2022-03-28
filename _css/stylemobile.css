@@ -1,104 +1,57 @@
+@media(max-width: 390px){
+	nav ul {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		height: auto;
+	}
 
-
-div {
-	
+	nav ul li {
+		width: 100%;
+		font-size: 15px;
+	}
 }
 
-header {
-	
-}
 
-h1 {
-	
-}
+@media(max-width: 490px){
 
-nav {
-	
-}
+	h1 {
+		font-size: 30px;
+	}
 
-nav ul {
-	
-}
+	nav ul li {
+		font-size: 12px;
+	}
 
-nav ul a {
-	
-}
-
-nav ul li {
+	.rodape {
+		height: auto;
 		
-}
+	}
 
-nav ul li:hover {
-	
-}
-
-main {
-	
+	.rodape article {
+		width: 100%;		
+		margin: 10px 0px;
+	}
 
 }
 
-a {
-	
-}
+@media(max-width: 600px){
+	nav ul li {
+		font-size: 15px;
+	}
+	.rodape {
+		display: flex;
+		flex-wrap: wrap;
+		height: auto;
+		
+	}
 
-.secao {
-	
+	.rodape article {
+		width: 100%;		
+		margin: 10px 0px;
+	}
 }
-
-.item-secao {
-	
-}
-
-.item-secao img {
-	
-}
-
-.item-secao p {
-	
-}
-
-.formulario {
-	
-}
-
-.formulario input {
-	
-}
-
-.bt {
 	
 
-}
 
-.bt:hover {
-	
-}
 
-.button-inputs {
-	
-}
-
-#corredor-rodape {
-	
-}
-
-#preload {
-	
-}
-
-footer {
-	
-}
-
-.rodape {
-	
-	
-}
-
-.rodape article {
-	
-}
-
-.rodape img {
-	
-}

@@ -12,7 +12,7 @@
 		if ($conn->query($sql)){
 			header('Location: ../_pages/inscricao.php?id='.$id_evento);
 		} else {
-			echo $conn->error;
+			header('Location: ../_pages/inscricao.php?id='.$id_evento.'&nao=inscriçao+ja+foi+paga');
 		}
 
 		desconectar($conn);

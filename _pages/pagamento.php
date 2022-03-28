@@ -41,7 +41,7 @@
 				<?php
 				$verificar = "SELECT * FROM pagamento WHERE num_evento='$id_evento' and pagador='".$_SESSION['cpf']."';";
 				if ($conn->query($verificar)->num_rows > 0){
-					echo '<button class="bt button-inputs" style="background: green">PAGO<button>';				
+					echo '<p style="background: #2f2;text-align: center">PAGO<p>';				
 				} else {
 				?> 
 					<p>

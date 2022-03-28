@@ -3,21 +3,19 @@
 
 	if ( isset($_SESSION['usuario']) and isset($_SESSION['cpf']) ){
 	?>
-	<a href="index.php">
-	</a>
-	<h1>Perfil</h1>
 	<?php
-
-	if(isset($_GET['bv'])){
-		echo "<p id='text' style='text-align:center;background-color:aqua;'>".$_GET['bv']."</p>";
-	};
-
+	if(isset($_GET['c'])){
+		echo "<p style='text-align:center;background-color:aqua;height: 30px' id='msg'>".$_GET['c']."</p>";			
+			}
 	?>
+	<h1>Perfil</h1>
+
 	<section class="secao">
 	<article class="">
 	
 	</article>	
 	</section>
+	
 
 	<section class="secao">
 	<article class="item-secao">
@@ -25,14 +23,7 @@
 	
 		<?php
 
-			if(isset($_GET['c'])){
-				echo "<p id='text' style='text-align:center;background-color:aqua;'>".$_GET['c']."</p>";
 			
-			}else if(isset($_GET['e'])){
-				echo "<p id='text' style='text-align:center;background-color:aqua;'>".$_GET['e']."</p>";
-			}else if(isset($_GET['r'])){
-				echo "<p id='text' style='text-align:center;background-color:aqua;'>".$_GET['r']."</p>";
-			};
 
 			include "../_bd/conexao.php";
 
@@ -81,7 +72,7 @@
 			<form id="form" action="" method="post" enctype="multipart/form-data">
 				<label for="fotoPerfil"><img src="../_imgs/img_perfil/<?php echo $img; ?>" style="border-radius: 10px">Click e escolha uma foto de perfil</label>
 				<input type="file" name="file" id="fotoPerfil" style="display: none;" />
-				<input type="submit" name="enviaFoto" value="Confirmar foto" class="bt button-inputs" id="mdfoto">
+				<input type="submit" name="enviaFoto" value="Confirmar foto" class="bt button-inputs" id="mdfoto" style="visibility: hidden;: ">
 				<br/><br/><a href="editar_perfil.php" class="bt">Alterar Dados
 		          <!-- <button></button> -->
 				</a>

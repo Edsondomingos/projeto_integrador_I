@@ -16,7 +16,6 @@ body {
 }
 
 div {
-	/*height: 100%;*/
 	margin: auto;
 }
 
@@ -53,14 +52,13 @@ nav ul a {
 
 nav ul li {
 	list-style: none;
-	/*border: 2px solid black;*/
-	/*border-radius: 10% 10% 0 0;*/
 	border-bottom: 0px;
 	padding: 10px;
 	box-sizing: border-box;
 	color: #444;
-	font-size: 1rem;
-	font-weight: bolder;	
+	font-size: 24px;
+	font-weight: bolder;
+	margin: 0 5px;	
 }
 
 nav ul li:hover {
@@ -165,26 +163,17 @@ footer {
 	width: auto;
 	height: auto;
 	font-size: 85%;
-	/*font-family: 'Merriweather', serif ,Helverita;*/
-	/*font-weight: 600;*/
-
+	font-family: 'Merriweather', serif ,Helverita;
 	display: flex;
 	flex-wrap: wrap;
-
-	/*flex-basis: 0;
-	flex-shrink: 2;
-	flex-grow: 2;*/
-
 	height: 100px;
-	/*background-image: linear-gradient(to top, rgba(220, 100, 0, 0.7), #eee);*/
-	background-color: #555;
-	
+	background-color: #555;	
 }
 
 .rodape article {
 	width: 25%;
 	margin: 10px 25px;
-	/*line-height: 30%;*/
+	padding: 5px;
 }
 
 .rodape img {
