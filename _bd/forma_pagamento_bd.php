@@ -14,7 +14,7 @@ if ( isset($_SESSION['usuario']) and isset($_SESSION['cpf']) ){
 
 	$conn = conectar();
 
-	$sql = "INSERT INTO pagamento (id, forma_de_pagamento, data_hora_pagamento, titulo, valor, pagador, num_evento, numeroinscricao_inscricao) VALUES ('id','$forma', NOW(), '$titulo', '$valor', '$pagador', '$num_evento', '$inscricao');";
+	$sql = "INSERT INTO pagamento (forma_de_pagamento, data_hora_pagamento, titulo, valor, pagador, num_evento, numeroinscricao_inscricao) VALUES ('$forma', NOW(), '$titulo', '$valor', '$pagador', '$num_evento', '$inscricao');";
 
 	if($conn->query($sql)){
 		header("Location: ../_pages/pagamento.php");
