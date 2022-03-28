@@ -45,7 +45,7 @@
     
     <?php 
         
-        $verificar = "SELECT cpf_atleta FROM inscricao WHERE id_evento='$id';";
+        $verificar = "SELECT cpf_atleta FROM inscricao WHERE id_evento='$id' and cpf_atleta='".$_SESSION['cpf']."'";
         if ($conn->query($verificar)->num_rows <= 0){
             echo '<form action="../_bd/inscricao.php" método="post">';
             echo '<p><input type="hidden" name="id" value="'.$id.'"></p>';
@@ -58,8 +58,10 @@
             if(isset($_GET['nao'])){
                echo "<p style='font-size:20px;background:#2f2'>".$_GET['nao']."</p>" ;
             }
-            $pdf = "SELECT resultado FROM inscricao WHERE id_evento='".$id."' and cpf_atleta='".$_SESSION['cpf']."'";
+
+            $pdf = "SELECT resultado FROM inscricao WHERE id_evento='".$id."'";
             $nomePdf = $conn->query($pdf)->fetch_assoc()['resultado'];
+            
             if ($nomePdf != 'vazio'){
                 echo "<a href='../_imgs/pdfs/".$nomePdf."' class='bt button-inputs'>resultado</a>";
             }
