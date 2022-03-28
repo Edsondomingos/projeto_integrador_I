@@ -28,7 +28,7 @@ CREATE TABLE IF NOT EXISTS evento(
 CREATE TABLE IF NOT EXISTS inscricao(
     numeroinscricao int NOT NULL auto_increment PRIMARY KEY,
     data_hora_inscricao DATETIME NOT NULL,
-    resultado VARCHAR(10),
+    resultado VARCHAR(50),
     imagem_evento VARCHAR(100) NOT NULL,
     titulo_evento VARCHAR(100) NOT NULL,
     valor_evento  DECIMAL(7,2) NOT NULL,
